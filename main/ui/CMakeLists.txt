@@ -1,6 +1,38 @@
 SET(SOURCES screens/ui_Home.c
+    screens/ui_RoomsView.c
+    screens/ui_KitchenView.c
+    screens/ui_LivingRoomView.c
+    screens/ui_MasterBedroomView.c
+    screens/ui_BedroomView.c
+    screens/ui_LaundryRoomView.c
+    screens/ui_OfficeView.c
+    screens/ui_Settings.c
     ui.c
     components/ui_comp_hook.c
-    ui_helpers.c)
+    ui_helpers.c
+    ui_events.c
+    images/ui_img_house_png.c
+    images/ui_img_settingsicon_png.c
+    images/ui_img_kitchenicon_png.c
+    images/ui_img_livingroomicon_png.c
+    images/ui_img_masterbedroomicon_png.c
+    images/ui_img_laundryroomicon_png.c
+    images/ui_img_bedroomicon_png.c
+    images/ui_img_officeicon_png.c
+    images/ui_img_tinyhouse_png.c
+    images/ui_img_kitchen_png.c
+    images/ui_img_tempgradientdetailed_png.c
+    images/ui_img_humiditygradient_png.c
+    images/ui_img_livingroom_png.c
+    images/ui_img_masterbedroom_png.c
+    images/ui_img_bedroom_png.c
+    images/ui_img_laundryroom_png.c
+    images/ui_img_office_png.c
+    fonts/ui_font_Heading.c
+    fonts/ui_font_Regular.c
+    fonts/ui_font_SmallThin.c
+    fonts/ui_font_SubTitle.c
+    fonts/ui_font_Title.c
+    fonts/ui_font_VerySmall.c)
 
 add_library(ui ${SOURCES})

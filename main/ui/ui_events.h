@@ -10,6 +10,9 @@
 extern "C" {
 #endif
 
+void cancel_settings_change(lv_event_t * e);
+void save_settings(lv_event_t * e);
+
 #ifdef __cplusplus
 } /*extern "C"*/
 #endif

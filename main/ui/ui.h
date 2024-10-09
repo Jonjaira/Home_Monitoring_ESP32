@@ -15,15 +15,222 @@ extern "C" {
 #include "ui_helpers.h"
 #include "ui_events.h"
 
+void KitchenIconInit_Animation(lv_obj_t * TargetObject, int delay);
+void LivingRoomIconInit_Animation(lv_obj_t * TargetObject, int delay);
+void MasterBedroomIconInit_Animation(lv_obj_t * TargetObject, int delay);
+void BedRoomIconInit_Animation(lv_obj_t * TargetObject, int delay);
+void LaundryRoomIconInit_Animation(lv_obj_t * TargetObject, int delay);
+void OfficeIconInit_Animation(lv_obj_t * TargetObject, int delay);
+void KitchenIconReset_Animation(lv_obj_t * TargetObject, int delay);
+void LivingRoomIconReset_Animation(lv_obj_t * TargetObject, int delay);
+void MasterBedRoomIconReset_Animation(lv_obj_t * TargetObject, int delay);
+void BedRoomIconReset_Animation(lv_obj_t * TargetObject, int delay);
+void LaundryRoomIconReset_Animation(lv_obj_t * TargetObject, int delay);
+void OfficeIconReset_Animation(lv_obj_t * TargetObject, int delay);
+void TitleInit_Animation(lv_obj_t * TargetObject, int delay);
+void SubTitleInit_Animation(lv_obj_t * TargetObject, int delay);
+void AuthorInit_Animation(lv_obj_t * TargetObject, int delay);
+void TinyHouseIconInit_Animation(lv_obj_t * TargetObject, int delay);
+void RoomLabelInit_Animation(lv_obj_t * TargetObject, int delay);
+void TitleReset_Animation(lv_obj_t * TargetObject, int delay);
+void SubTitleReset_Animation(lv_obj_t * TargetObject, int delay);
+void AuthorReset_Animation(lv_obj_t * TargetObject, int delay);
+void InstructionsInit_Animation(lv_obj_t * TargetObject, int delay);
+void InstructionsReset_Animation(lv_obj_t * TargetObject, int delay);
+void TinyHouseIconReset_Animation(lv_obj_t * TargetObject, int delay);
+void KitchenIconPosition_Animation(lv_obj_t * TargetObject, int delay);
+void LivingRoomIconPosition_Animation(lv_obj_t * TargetObject, int delay);
+void MasterBedroomIconPosition_Animation(lv_obj_t * TargetObject, int delay);
+void BedroomIconPosition_Animation(lv_obj_t * TargetObject, int delay);
+void LaundryRoomIconPosition_Animation(lv_obj_t * TargetObject, int delay);
+void OfficeIconPosition_Animation(lv_obj_t * TargetObject, int delay);
+void KitchenLabelPosition_Animation(lv_obj_t * TargetObject, int delay);
+void LivinrRoomLabelPosition_Animation(lv_obj_t * TargetObject, int delay);
+void MasterBoedroomLabelPosition_Animation(lv_obj_t * TargetObject, int delay);
+void LaundryRoomLabelPosition_Animation(lv_obj_t * TargetObject, int delay);
+void OfficeLabelPosition_Animation(lv_obj_t * TargetObject, int delay);
+void BedroomLabelPosition_Animation(lv_obj_t * TargetObject, int delay);
+void SettingsSaved_Animation(lv_obj_t * TargetObject, int delay);
 // SCREEN: ui_Home
 void ui_Home_screen_init(void);
+void ui_event_Home(lv_event_t * e);
 extern lv_obj_t * ui_Home;
+void ui_event_House(lv_event_t * e);
+extern lv_obj_t * ui_House;
+extern lv_obj_t * ui_Title;
+extern lv_obj_t * ui_SubTitle;
+extern lv_obj_t * ui_Author;
+extern lv_obj_t * ui_InstructionsLabel;
+void ui_event_Panel2(lv_event_t * e);
+extern lv_obj_t * ui_Panel2;
+// SCREEN: ui_RoomsView
+void ui_RoomsView_screen_init(void);
+void ui_event_RoomsView(lv_event_t * e);
+extern lv_obj_t * ui_RoomsView;
+void ui_event_KitchenIcon(lv_event_t * e);
+extern lv_obj_t * ui_KitchenIcon;
+void ui_event_LivingRoomIcon(lv_event_t * e);
+extern lv_obj_t * ui_LivingRoomIcon;
+void ui_event_MasterBedroomIcon(lv_event_t * e);
+extern lv_obj_t * ui_MasterBedroomIcon;
+void ui_event_LaundryRoomIcon(lv_event_t * e);
+extern lv_obj_t * ui_LaundryRoomIcon;
+void ui_event_BedRoomIcon(lv_event_t * e);
+extern lv_obj_t * ui_BedRoomIcon;
+void ui_event_OfficeIcon(lv_event_t * e);
+extern lv_obj_t * ui_OfficeIcon;
+void ui_event_HouseIcon(lv_event_t * e);
+extern lv_obj_t * ui_HouseIcon;
+extern lv_obj_t * ui_KitchenLabel;
+extern lv_obj_t * ui_LivingroomLabel;
+extern lv_obj_t * ui_MasterBedroomLabel;
+extern lv_obj_t * ui_LaundryRoomLabel;
+extern lv_obj_t * ui_BedroomLabel;
+extern lv_obj_t * ui_OfficeLabel;
+// SCREEN: ui_KitchenView
+void ui_KitchenView_screen_init(void);
+void ui_event_KitchenView(lv_event_t * e);
+extern lv_obj_t * ui_KitchenView;
+void ui_event_Kitchen(lv_event_t * e);
+extern lv_obj_t * ui_Kitchen;
+extern lv_obj_t * ui_KitchenViewTitle;
+extern lv_obj_t * ui_KitchenTempGradient;
+extern lv_obj_t * ui_KitchenTempLabel;
+extern lv_obj_t * ui_KitchenTempVal;
+extern lv_obj_t * ui_KitchenTempUnits;
+extern lv_obj_t * ui_KitchenHumidityVal;
+extern lv_obj_t * ui_KitchenHumidityGradient;
+extern lv_obj_t * ui_KitchenHumidityLabel;
+extern lv_obj_t * ui_KitchenPresenceLabel;
+extern lv_obj_t * ui_KitchenPresenceIndicator;
+// SCREEN: ui_LivingRoomView
+void ui_LivingRoomView_screen_init(void);
+void ui_event_LivingRoomView(lv_event_t * e);
+extern lv_obj_t * ui_LivingRoomView;
+void ui_event_Livingroom(lv_event_t * e);
+extern lv_obj_t * ui_Livingroom;
+extern lv_obj_t * ui_LivingroomViewTitle;
+extern lv_obj_t * ui_LivingroomTempVal;
+extern lv_obj_t * ui_LivingroomTempLabel;
+extern lv_obj_t * ui_LivingroomTempUnits;
+extern lv_obj_t * ui_LivingroomTempGradient;
+extern lv_obj_t * ui_LivingroomHumidityVal;
+extern lv_obj_t * ui_LivingroomHumidityLabel;
+extern lv_obj_t * ui_LivingroomHumidityGradient;
+extern lv_obj_t * ui_LivingRoomPresenceLabel;
+extern lv_obj_t * ui_LivingRoomPresenceIndicator;
+// SCREEN: ui_MasterBedroomView
+void ui_MasterBedroomView_screen_init(void);
+void ui_event_MasterBedroomView(lv_event_t * e);
+extern lv_obj_t * ui_MasterBedroomView;
+void ui_event_MasterBedroom(lv_event_t * e);
+extern lv_obj_t * ui_MasterBedroom;
+extern lv_obj_t * ui_MasterBedroomViewTitle;
+extern lv_obj_t * ui_MasterBedroomTempVal;
+extern lv_obj_t * ui_MasterBedroomTempLabel;
+extern lv_obj_t * ui_MasterBedroomTempUnits;
+extern lv_obj_t * ui_MasterBedroomTempGradient;
+extern lv_obj_t * ui_MasterBedroomHumidityVal;
+extern lv_obj_t * ui_MasterBedroomHumidityLabel;
+extern lv_obj_t * ui_MasterBedroomHumidityGradient;
+extern lv_obj_t * ui_MasterBedroomPresenceLabel;
+extern lv_obj_t * ui_MasterBedroomPresenceIndicator;
+// SCREEN: ui_BedroomView
+void ui_BedroomView_screen_init(void);
+void ui_event_BedroomView(lv_event_t * e);
+extern lv_obj_t * ui_BedroomView;
+void ui_event_Bedroom(lv_event_t * e);
+extern lv_obj_t * ui_Bedroom;
+extern lv_obj_t * ui_BedroomViewTitle;
+extern lv_obj_t * ui_BedroomTempVal;
+extern lv_obj_t * ui_BedroomTempLabel;
+extern lv_obj_t * ui_BedroomTempUnits;
+extern lv_obj_t * ui_BedroomTempGradient;
+extern lv_obj_t * ui_BedroomHumidityVal;
+extern lv_obj_t * ui_BedroomHumidityLabel;
+extern lv_obj_t * ui_BedroomHumidityGradient;
+extern lv_obj_t * ui_BedroomPresenceLabel;
+extern lv_obj_t * ui_BedroomPresenceIndicator;
+// SCREEN: ui_LaundryRoomView
+void ui_LaundryRoomView_screen_init(void);
+void ui_event_LaundryRoomView(lv_event_t * e);
+extern lv_obj_t * ui_LaundryRoomView;
+void ui_event_LaundryRoom(lv_event_t * e);
+extern lv_obj_t * ui_LaundryRoom;
+extern lv_obj_t * ui_LaundryRoomViewTitle;
+extern lv_obj_t * ui_LaundryRoomTempVal;
+extern lv_obj_t * ui_LaundryRoomTempLabel;
+extern lv_obj_t * ui_LaundryRoomTempUnits;
+extern lv_obj_t * ui_LaundryRoomTempGradient;
+extern lv_obj_t * ui_LaundryRoomHumidityVal;
+extern lv_obj_t * ui_LaundryRoomHumidityLabel;
+extern lv_obj_t * ui_LaundryRoomHumidityGradient;
+extern lv_obj_t * ui_LaundryRoomPresenceLabel;
+extern lv_obj_t * ui_LaundryRoomPresenceIndicator;
+// SCREEN: ui_OfficeView
+void ui_OfficeView_screen_init(void);
+void ui_event_OfficeView(lv_event_t * e);
+extern lv_obj_t * ui_OfficeView;
+void ui_event_Office(lv_event_t * e);
+extern lv_obj_t * ui_Office;
+extern lv_obj_t * ui_OfficeViewTitle;
+extern lv_obj_t * ui_OfficeTempVal;
+extern lv_obj_t * ui_OfficeTempLabel;
+extern lv_obj_t * ui_OfficeTempUnits;
+extern lv_obj_t * ui_OfficeTempGradient;
+extern lv_obj_t * ui_OfficeHumidityVal;
+extern lv_obj_t * ui_OfficeHumidityLabel;
+extern lv_obj_t * ui_OfficeHumidityGradient;
+extern lv_obj_t * ui_OfficePresenceLabel;
+extern lv_obj_t * ui_OfficePresenceIndicator;
+// SCREEN: ui_Settings
+void ui_Settings_screen_init(void);
+void ui_event_Settings(lv_event_t * e);
+extern lv_obj_t * ui_Settings;
+extern lv_obj_t * ui_SettingsTitleLabel;
+void ui_event_CancelButton(lv_event_t * e);
+extern lv_obj_t * ui_CancelButton;
+void ui_event_SaveButton(lv_event_t * e);
+extern lv_obj_t * ui_SaveButton;
+extern lv_obj_t * ui_SettingsSavedLabel;
+extern lv_obj_t * ui_SettingsLayout;
+extern lv_obj_t * ui_SSIDLabel;
+extern lv_obj_t * ui_SSIDInput;
+extern lv_obj_t * ui_PasswordLabel;
+extern lv_obj_t * ui_PasswordInput;
+extern lv_obj_t * ui_TempUnit;
+extern lv_obj_t * ui_Celsius;
+extern lv_obj_t * ui_Switch2;
+extern lv_obj_t * ui_Farenheit;
 extern lv_obj_t * ui____initial_actions0;
 
 
+LV_IMG_DECLARE(ui_img_house_png);    // assets/House.png
+LV_IMG_DECLARE(ui_img_settingsicon_png);    // assets/SettingsIcon.png
+LV_IMG_DECLARE(ui_img_kitchenicon_png);    // assets/KitchenIcon.png
+LV_IMG_DECLARE(ui_img_livingroomicon_png);    // assets/LivingRoomIcon.png
+LV_IMG_DECLARE(ui_img_masterbedroomicon_png);    // assets/MasterBedroomIcon.png
+LV_IMG_DECLARE(ui_img_laundryroomicon_png);    // assets/LaundryRoomIcon.png
+LV_IMG_DECLARE(ui_img_bedroomicon_png);    // assets/BedRoomIcon.png
+LV_IMG_DECLARE(ui_img_officeicon_png);    // assets/OfficeIcon.png
+LV_IMG_DECLARE(ui_img_tinyhouse_png);    // assets/TinyHouse.png
+LV_IMG_DECLARE(ui_img_kitchen_png);    // assets/Kitchen.png
+LV_IMG_DECLARE(ui_img_tempgradientdetailed_png);    // assets/TempGradientDetailed.png
+LV_IMG_DECLARE(ui_img_humiditygradient_png);    // assets/HumidityGradient.png
+LV_IMG_DECLARE(ui_img_livingroom_png);    // assets/LivingRoom.png
+LV_IMG_DECLARE(ui_img_masterbedroom_png);    // assets/MasterBedroom.png
+LV_IMG_DECLARE(ui_img_bedroom_png);    // assets/Bedroom.png
+LV_IMG_DECLARE(ui_img_laundryroom_png);    // assets/LaundryRoom.png
+LV_IMG_DECLARE(ui_img_office_png);    // assets/Office.png
 
 
 
+LV_FONT_DECLARE(ui_font_Heading);
+LV_FONT_DECLARE(ui_font_Regular);
+LV_FONT_DECLARE(ui_font_SmallThin);
+LV_FONT_DECLARE(ui_font_SubTitle);
+LV_FONT_DECLARE(ui_font_Title);
+LV_FONT_DECLARE(ui_font_VerySmall);
 
 
 

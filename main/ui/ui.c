@@ -7,11 +7,211 @@
 #include "ui_helpers.h"
 
 ///////////////////// VARIABLES ////////////////////
+void KitchenIconInit_Animation(lv_obj_t * TargetObject, int delay);
+void LivingRoomIconInit_Animation(lv_obj_t * TargetObject, int delay);
+void MasterBedroomIconInit_Animation(lv_obj_t * TargetObject, int delay);
+void BedRoomIconInit_Animation(lv_obj_t * TargetObject, int delay);
+void LaundryRoomIconInit_Animation(lv_obj_t * TargetObject, int delay);
+void OfficeIconInit_Animation(lv_obj_t * TargetObject, int delay);
+void KitchenIconReset_Animation(lv_obj_t * TargetObject, int delay);
+void LivingRoomIconReset_Animation(lv_obj_t * TargetObject, int delay);
+void MasterBedRoomIconReset_Animation(lv_obj_t * TargetObject, int delay);
+void BedRoomIconReset_Animation(lv_obj_t * TargetObject, int delay);
+void LaundryRoomIconReset_Animation(lv_obj_t * TargetObject, int delay);
+void OfficeIconReset_Animation(lv_obj_t * TargetObject, int delay);
+void TitleInit_Animation(lv_obj_t * TargetObject, int delay);
+void SubTitleInit_Animation(lv_obj_t * TargetObject, int delay);
+void AuthorInit_Animation(lv_obj_t * TargetObject, int delay);
+void TinyHouseIconInit_Animation(lv_obj_t * TargetObject, int delay);
+void RoomLabelInit_Animation(lv_obj_t * TargetObject, int delay);
+void TitleReset_Animation(lv_obj_t * TargetObject, int delay);
+void SubTitleReset_Animation(lv_obj_t * TargetObject, int delay);
+void AuthorReset_Animation(lv_obj_t * TargetObject, int delay);
+void InstructionsInit_Animation(lv_obj_t * TargetObject, int delay);
+void InstructionsReset_Animation(lv_obj_t * TargetObject, int delay);
+void TinyHouseIconReset_Animation(lv_obj_t * TargetObject, int delay);
+void KitchenIconPosition_Animation(lv_obj_t * TargetObject, int delay);
+void LivingRoomIconPosition_Animation(lv_obj_t * TargetObject, int delay);
+void MasterBedroomIconPosition_Animation(lv_obj_t * TargetObject, int delay);
+void BedroomIconPosition_Animation(lv_obj_t * TargetObject, int delay);
+void LaundryRoomIconPosition_Animation(lv_obj_t * TargetObject, int delay);
+void OfficeIconPosition_Animation(lv_obj_t * TargetObject, int delay);
+void KitchenLabelPosition_Animation(lv_obj_t * TargetObject, int delay);
+void LivinrRoomLabelPosition_Animation(lv_obj_t * TargetObject, int delay);
+void MasterBoedroomLabelPosition_Animation(lv_obj_t * TargetObject, int delay);
+void LaundryRoomLabelPosition_Animation(lv_obj_t * TargetObject, int delay);
+void OfficeLabelPosition_Animation(lv_obj_t * TargetObject, int delay);
+void BedroomLabelPosition_Animation(lv_obj_t * TargetObject, int delay);
+void SettingsSaved_Animation(lv_obj_t * TargetObject, int delay);
 
 
 // SCREEN: ui_Home
 void ui_Home_screen_init(void);
+void ui_event_Home(lv_event_t * e);
 lv_obj_t * ui_Home;
+void ui_event_House(lv_event_t * e);
+lv_obj_t * ui_House;
+lv_obj_t * ui_Title;
+lv_obj_t * ui_SubTitle;
+lv_obj_t * ui_Author;
+lv_obj_t * ui_InstructionsLabel;
+void ui_event_Panel2(lv_event_t * e);
+lv_obj_t * ui_Panel2;
+
+
+// SCREEN: ui_RoomsView
+void ui_RoomsView_screen_init(void);
+void ui_event_RoomsView(lv_event_t * e);
+lv_obj_t * ui_RoomsView;
+void ui_event_KitchenIcon(lv_event_t * e);
+lv_obj_t * ui_KitchenIcon;
+void ui_event_LivingRoomIcon(lv_event_t * e);
+lv_obj_t * ui_LivingRoomIcon;
+void ui_event_MasterBedroomIcon(lv_event_t * e);
+lv_obj_t * ui_MasterBedroomIcon;
+void ui_event_LaundryRoomIcon(lv_event_t * e);
+lv_obj_t * ui_LaundryRoomIcon;
+void ui_event_BedRoomIcon(lv_event_t * e);
+lv_obj_t * ui_BedRoomIcon;
+void ui_event_OfficeIcon(lv_event_t * e);
+lv_obj_t * ui_OfficeIcon;
+void ui_event_HouseIcon(lv_event_t * e);
+lv_obj_t * ui_HouseIcon;
+lv_obj_t * ui_KitchenLabel;
+lv_obj_t * ui_LivingroomLabel;
+lv_obj_t * ui_MasterBedroomLabel;
+lv_obj_t * ui_LaundryRoomLabel;
+lv_obj_t * ui_BedroomLabel;
+lv_obj_t * ui_OfficeLabel;
+
+
+// SCREEN: ui_KitchenView
+void ui_KitchenView_screen_init(void);
+void ui_event_KitchenView(lv_event_t * e);
+lv_obj_t * ui_KitchenView;
+void ui_event_Kitchen(lv_event_t * e);
+lv_obj_t * ui_Kitchen;
+lv_obj_t * ui_KitchenViewTitle;
+lv_obj_t * ui_KitchenTempGradient;
+lv_obj_t * ui_KitchenTempLabel;
+lv_obj_t * ui_KitchenTempVal;
+lv_obj_t * ui_KitchenTempUnits;
+lv_obj_t * ui_KitchenHumidityVal;
+lv_obj_t * ui_KitchenHumidityGradient;
+lv_obj_t * ui_KitchenHumidityLabel;
+lv_obj_t * ui_KitchenPresenceLabel;
+lv_obj_t * ui_KitchenPresenceIndicator;
+
+
+// SCREEN: ui_LivingRoomView
+void ui_LivingRoomView_screen_init(void);
+void ui_event_LivingRoomView(lv_event_t * e);
+lv_obj_t * ui_LivingRoomView;
+void ui_event_Livingroom(lv_event_t * e);
+lv_obj_t * ui_Livingroom;
+lv_obj_t * ui_LivingroomViewTitle;
+lv_obj_t * ui_LivingroomTempVal;
+lv_obj_t * ui_LivingroomTempLabel;
+lv_obj_t * ui_LivingroomTempUnits;
+lv_obj_t * ui_LivingroomTempGradient;
+lv_obj_t * ui_LivingroomHumidityVal;
+lv_obj_t * ui_LivingroomHumidityLabel;
+lv_obj_t * ui_LivingroomHumidityGradient;
+lv_obj_t * ui_LivingRoomPresenceLabel;
+lv_obj_t * ui_LivingRoomPresenceIndicator;
+
+
+// SCREEN: ui_MasterBedroomView
+void ui_MasterBedroomView_screen_init(void);
+void ui_event_MasterBedroomView(lv_event_t * e);
+lv_obj_t * ui_MasterBedroomView;
+void ui_event_MasterBedroom(lv_event_t * e);
+lv_obj_t * ui_MasterBedroom;
+lv_obj_t * ui_MasterBedroomViewTitle;
+lv_obj_t * ui_MasterBedroomTempVal;
+lv_obj_t * ui_MasterBedroomTempLabel;
+lv_obj_t * ui_MasterBedroomTempUnits;
+lv_obj_t * ui_MasterBedroomTempGradient;
+lv_obj_t * ui_MasterBedroomHumidityVal;
+lv_obj_t * ui_MasterBedroomHumidityLabel;
+lv_obj_t * ui_MasterBedroomHumidityGradient;
+lv_obj_t * ui_MasterBedroomPresenceLabel;
+lv_obj_t * ui_MasterBedroomPresenceIndicator;
+
+
+// SCREEN: ui_BedroomView
+void ui_BedroomView_screen_init(void);
+void ui_event_BedroomView(lv_event_t * e);
+lv_obj_t * ui_BedroomView;
+void ui_event_Bedroom(lv_event_t * e);
+lv_obj_t * ui_Bedroom;
+lv_obj_t * ui_BedroomViewTitle;
+lv_obj_t * ui_BedroomTempVal;
+lv_obj_t * ui_BedroomTempLabel;
+lv_obj_t * ui_BedroomTempUnits;
+lv_obj_t * ui_BedroomTempGradient;
+lv_obj_t * ui_BedroomHumidityVal;
+lv_obj_t * ui_BedroomHumidityLabel;
+lv_obj_t * ui_BedroomHumidityGradient;
+lv_obj_t * ui_BedroomPresenceLabel;
+lv_obj_t * ui_BedroomPresenceIndicator;
+
+
+// SCREEN: ui_LaundryRoomView
+void ui_LaundryRoomView_screen_init(void);
+void ui_event_LaundryRoomView(lv_event_t * e);
+lv_obj_t * ui_LaundryRoomView;
+void ui_event_LaundryRoom(lv_event_t * e);
+lv_obj_t * ui_LaundryRoom;
+lv_obj_t * ui_LaundryRoomViewTitle;
+lv_obj_t * ui_LaundryRoomTempVal;
+lv_obj_t * ui_LaundryRoomTempLabel;
+lv_obj_t * ui_LaundryRoomTempUnits;
+lv_obj_t * ui_LaundryRoomTempGradient;
+lv_obj_t * ui_LaundryRoomHumidityVal;
+lv_obj_t * ui_LaundryRoomHumidityLabel;
+lv_obj_t * ui_LaundryRoomHumidityGradient;
+lv_obj_t * ui_LaundryRoomPresenceLabel;
+lv_obj_t * ui_LaundryRoomPresenceIndicator;
+
+
+// SCREEN: ui_OfficeView
+void ui_OfficeView_screen_init(void);
+void ui_event_OfficeView(lv_event_t * e);
+lv_obj_t * ui_OfficeView;
+void ui_event_Office(lv_event_t * e);
+lv_obj_t * ui_Office;
+lv_obj_t * ui_OfficeViewTitle;
+lv_obj_t * ui_OfficeTempVal;
+lv_obj_t * ui_OfficeTempLabel;
+lv_obj_t * ui_OfficeTempUnits;
+lv_obj_t * ui_OfficeTempGradient;
+lv_obj_t * ui_OfficeHumidityVal;
+lv_obj_t * ui_OfficeHumidityLabel;
+lv_obj_t * ui_OfficeHumidityGradient;
+lv_obj_t * ui_OfficePresenceLabel;
+lv_obj_t * ui_OfficePresenceIndicator;
+
+
+// SCREEN: ui_Settings
+void ui_Settings_screen_init(void);
+void ui_event_Settings(lv_event_t * e);
+lv_obj_t * ui_Settings;
+lv_obj_t * ui_SettingsTitleLabel;
+void ui_event_CancelButton(lv_event_t * e);
+lv_obj_t * ui_CancelButton;
+void ui_event_SaveButton(lv_event_t * e);
+lv_obj_t * ui_SaveButton;
+lv_obj_t * ui_SettingsSavedLabel;
+lv_obj_t * ui_SettingsLayout;
+lv_obj_t * ui_SSIDLabel;
+lv_obj_t * ui_SSIDInput;
+lv_obj_t * ui_PasswordLabel;
+lv_obj_t * ui_PasswordInput;
+lv_obj_t * ui_TempUnit;
+lv_obj_t * ui_Celsius;
+lv_obj_t * ui_Switch2;
+lv_obj_t * ui_Farenheit;
 lv_obj_t * ui____initial_actions0;
 
 ///////////////////// TEST LVGL SETTINGS ////////////////////
@@ -23,8 +223,1743 @@ lv_obj_t * ui____initial_actions0;
 #endif
 
 ///////////////////// ANIMATIONS ////////////////////
+void KitchenIconInit_Animation(lv_obj_t * TargetObject, int delay)
+{
+    ui_anim_user_data_t * PropertyAnimation_0_user_data = lv_mem_alloc(sizeof(ui_anim_user_data_t));
+    PropertyAnimation_0_user_data->target = TargetObject;
+    PropertyAnimation_0_user_data->val = -1;
+    lv_anim_t PropertyAnimation_0;
+    lv_anim_init(&PropertyAnimation_0);
+    lv_anim_set_time(&PropertyAnimation_0, 500);
+    lv_anim_set_user_data(&PropertyAnimation_0, PropertyAnimation_0_user_data);
+    lv_anim_set_custom_exec_cb(&PropertyAnimation_0, _ui_anim_callback_set_x);
+    lv_anim_set_values(&PropertyAnimation_0, 0, -200);
+    lv_anim_set_path_cb(&PropertyAnimation_0, lv_anim_path_linear);
+    lv_anim_set_delay(&PropertyAnimation_0, delay + 0);
+    lv_anim_set_deleted_cb(&PropertyAnimation_0, _ui_anim_callback_free_user_data);
+    lv_anim_set_playback_time(&PropertyAnimation_0, 0);
+    lv_anim_set_playback_delay(&PropertyAnimation_0, 0);
+    lv_anim_set_repeat_count(&PropertyAnimation_0, 0);
+    lv_anim_set_repeat_delay(&PropertyAnimation_0, 0);
+    lv_anim_set_early_apply(&PropertyAnimation_0, false);
+    lv_anim_start(&PropertyAnimation_0);
+    ui_anim_user_data_t * PropertyAnimation_1_user_data = lv_mem_alloc(sizeof(ui_anim_user_data_t));
+    PropertyAnimation_1_user_data->target = TargetObject;
+    PropertyAnimation_1_user_data->val = -1;
+    lv_anim_t PropertyAnimation_1;
+    lv_anim_init(&PropertyAnimation_1);
+    lv_anim_set_time(&PropertyAnimation_1, 500);
+    lv_anim_set_user_data(&PropertyAnimation_1, PropertyAnimation_1_user_data);
+    lv_anim_set_custom_exec_cb(&PropertyAnimation_1, _ui_anim_callback_set_y);
+    lv_anim_set_values(&PropertyAnimation_1, 0, -100);
+    lv_anim_set_path_cb(&PropertyAnimation_1, lv_anim_path_linear);
+    lv_anim_set_delay(&PropertyAnimation_1, delay + 0);
+    lv_anim_set_deleted_cb(&PropertyAnimation_1, _ui_anim_callback_free_user_data);
+    lv_anim_set_playback_time(&PropertyAnimation_1, 0);
+    lv_anim_set_playback_delay(&PropertyAnimation_1, 0);
+    lv_anim_set_repeat_count(&PropertyAnimation_1, 0);
+    lv_anim_set_repeat_delay(&PropertyAnimation_1, 0);
+    lv_anim_set_early_apply(&PropertyAnimation_1, false);
+    lv_anim_start(&PropertyAnimation_1);
+    ui_anim_user_data_t * PropertyAnimation_2_user_data = lv_mem_alloc(sizeof(ui_anim_user_data_t));
+    PropertyAnimation_2_user_data->target = TargetObject;
+    PropertyAnimation_2_user_data->val = -1;
+    lv_anim_t PropertyAnimation_2;
+    lv_anim_init(&PropertyAnimation_2);
+    lv_anim_set_time(&PropertyAnimation_2, 500);
+    lv_anim_set_user_data(&PropertyAnimation_2, PropertyAnimation_2_user_data);
+    lv_anim_set_custom_exec_cb(&PropertyAnimation_2, _ui_anim_callback_set_opacity);
+    lv_anim_set_values(&PropertyAnimation_2, 0, 255);
+    lv_anim_set_path_cb(&PropertyAnimation_2, lv_anim_path_linear);
+    lv_anim_set_delay(&PropertyAnimation_2, delay + 0);
+    lv_anim_set_deleted_cb(&PropertyAnimation_2, _ui_anim_callback_free_user_data);
+    lv_anim_set_playback_time(&PropertyAnimation_2, 0);
+    lv_anim_set_playback_delay(&PropertyAnimation_2, 0);
+    lv_anim_set_repeat_count(&PropertyAnimation_2, 0);
+    lv_anim_set_repeat_delay(&PropertyAnimation_2, 0);
+    lv_anim_set_early_apply(&PropertyAnimation_2, false);
+    lv_anim_start(&PropertyAnimation_2);
+
+}
+void LivingRoomIconInit_Animation(lv_obj_t * TargetObject, int delay)
+{
+    ui_anim_user_data_t * PropertyAnimation_0_user_data = lv_mem_alloc(sizeof(ui_anim_user_data_t));
+    PropertyAnimation_0_user_data->target = TargetObject;
+    PropertyAnimation_0_user_data->val = -1;
+    lv_anim_t PropertyAnimation_0;
+    lv_anim_init(&PropertyAnimation_0);
+    lv_anim_set_time(&PropertyAnimation_0, 500);
+    lv_anim_set_user_data(&PropertyAnimation_0, PropertyAnimation_0_user_data);
+    lv_anim_set_custom_exec_cb(&PropertyAnimation_0, _ui_anim_callback_set_y);
+    lv_anim_set_values(&PropertyAnimation_0, 0, -145);
+    lv_anim_set_path_cb(&PropertyAnimation_0, lv_anim_path_linear);
+    lv_anim_set_delay(&PropertyAnimation_0, delay + 0);
+    lv_anim_set_deleted_cb(&PropertyAnimation_0, _ui_anim_callback_free_user_data);
+    lv_anim_set_playback_time(&PropertyAnimation_0, 0);
+    lv_anim_set_playback_delay(&PropertyAnimation_0, 0);
+    lv_anim_set_repeat_count(&PropertyAnimation_0, 0);
+    lv_anim_set_repeat_delay(&PropertyAnimation_0, 0);
+    lv_anim_set_early_apply(&PropertyAnimation_0, false);
+    lv_anim_start(&PropertyAnimation_0);
+    ui_anim_user_data_t * PropertyAnimation_1_user_data = lv_mem_alloc(sizeof(ui_anim_user_data_t));
+    PropertyAnimation_1_user_data->target = TargetObject;
+    PropertyAnimation_1_user_data->val = -1;
+    lv_anim_t PropertyAnimation_1;
+    lv_anim_init(&PropertyAnimation_1);
+    lv_anim_set_time(&PropertyAnimation_1, 500);
+    lv_anim_set_user_data(&PropertyAnimation_1, PropertyAnimation_1_user_data);
+    lv_anim_set_custom_exec_cb(&PropertyAnimation_1, _ui_anim_callback_set_opacity);
+    lv_anim_set_values(&PropertyAnimation_1, 0, 255);
+    lv_anim_set_path_cb(&PropertyAnimation_1, lv_anim_path_linear);
+    lv_anim_set_delay(&PropertyAnimation_1, delay + 0);
+    lv_anim_set_deleted_cb(&PropertyAnimation_1, _ui_anim_callback_free_user_data);
+    lv_anim_set_playback_time(&PropertyAnimation_1, 0);
+    lv_anim_set_playback_delay(&PropertyAnimation_1, 0);
+    lv_anim_set_repeat_count(&PropertyAnimation_1, 0);
+    lv_anim_set_repeat_delay(&PropertyAnimation_1, 0);
+    lv_anim_set_early_apply(&PropertyAnimation_1, false);
+    lv_anim_start(&PropertyAnimation_1);
+
+}
+void MasterBedroomIconInit_Animation(lv_obj_t * TargetObject, int delay)
+{
+    ui_anim_user_data_t * PropertyAnimation_0_user_data = lv_mem_alloc(sizeof(ui_anim_user_data_t));
+    PropertyAnimation_0_user_data->target = TargetObject;
+    PropertyAnimation_0_user_data->val = -1;
+    lv_anim_t PropertyAnimation_0;
+    lv_anim_init(&PropertyAnimation_0);
+    lv_anim_set_time(&PropertyAnimation_0, 500);
+    lv_anim_set_user_data(&PropertyAnimation_0, PropertyAnimation_0_user_data);
+    lv_anim_set_custom_exec_cb(&PropertyAnimation_0, _ui_anim_callback_set_x);
+    lv_anim_set_values(&PropertyAnimation_0, 0, 200);
+    lv_anim_set_path_cb(&PropertyAnimation_0, lv_anim_path_linear);
+    lv_anim_set_delay(&PropertyAnimation_0, delay + 0);
+    lv_anim_set_deleted_cb(&PropertyAnimation_0, _ui_anim_callback_free_user_data);
+    lv_anim_set_playback_time(&PropertyAnimation_0, 0);
+    lv_anim_set_playback_delay(&PropertyAnimation_0, 0);
+    lv_anim_set_repeat_count(&PropertyAnimation_0, 0);
+    lv_anim_set_repeat_delay(&PropertyAnimation_0, 0);
+    lv_anim_set_early_apply(&PropertyAnimation_0, false);
+    lv_anim_start(&PropertyAnimation_0);
+    ui_anim_user_data_t * PropertyAnimation_1_user_data = lv_mem_alloc(sizeof(ui_anim_user_data_t));
+    PropertyAnimation_1_user_data->target = TargetObject;
+    PropertyAnimation_1_user_data->val = -1;
+    lv_anim_t PropertyAnimation_1;
+    lv_anim_init(&PropertyAnimation_1);
+    lv_anim_set_time(&PropertyAnimation_1, 500);
+    lv_anim_set_user_data(&PropertyAnimation_1, PropertyAnimation_1_user_data);
+    lv_anim_set_custom_exec_cb(&PropertyAnimation_1, _ui_anim_callback_set_y);
+    lv_anim_set_values(&PropertyAnimation_1, 0, -100);
+    lv_anim_set_path_cb(&PropertyAnimation_1, lv_anim_path_linear);
+    lv_anim_set_delay(&PropertyAnimation_1, delay + 0);
+    lv_anim_set_deleted_cb(&PropertyAnimation_1, _ui_anim_callback_free_user_data);
+    lv_anim_set_playback_time(&PropertyAnimation_1, 0);
+    lv_anim_set_playback_delay(&PropertyAnimation_1, 0);
+    lv_anim_set_repeat_count(&PropertyAnimation_1, 0);
+    lv_anim_set_repeat_delay(&PropertyAnimation_1, 0);
+    lv_anim_set_early_apply(&PropertyAnimation_1, false);
+    lv_anim_start(&PropertyAnimation_1);
+    ui_anim_user_data_t * PropertyAnimation_2_user_data = lv_mem_alloc(sizeof(ui_anim_user_data_t));
+    PropertyAnimation_2_user_data->target = TargetObject;
+    PropertyAnimation_2_user_data->val = -1;
+    lv_anim_t PropertyAnimation_2;
+    lv_anim_init(&PropertyAnimation_2);
+    lv_anim_set_time(&PropertyAnimation_2, 500);
+    lv_anim_set_user_data(&PropertyAnimation_2, PropertyAnimation_2_user_data);
+    lv_anim_set_custom_exec_cb(&PropertyAnimation_2, _ui_anim_callback_set_opacity);
+    lv_anim_set_values(&PropertyAnimation_2, 0, 255);
+    lv_anim_set_path_cb(&PropertyAnimation_2, lv_anim_path_linear);
+    lv_anim_set_delay(&PropertyAnimation_2, delay + 0);
+    lv_anim_set_deleted_cb(&PropertyAnimation_2, _ui_anim_callback_free_user_data);
+    lv_anim_set_playback_time(&PropertyAnimation_2, 0);
+    lv_anim_set_playback_delay(&PropertyAnimation_2, 0);
+    lv_anim_set_repeat_count(&PropertyAnimation_2, 0);
+    lv_anim_set_repeat_delay(&PropertyAnimation_2, 0);
+    lv_anim_set_early_apply(&PropertyAnimation_2, false);
+    lv_anim_start(&PropertyAnimation_2);
+
+}
+void BedRoomIconInit_Animation(lv_obj_t * TargetObject, int delay)
+{
+    ui_anim_user_data_t * PropertyAnimation_0_user_data = lv_mem_alloc(sizeof(ui_anim_user_data_t));
+    PropertyAnimation_0_user_data->target = TargetObject;
+    PropertyAnimation_0_user_data->val = -1;
+    lv_anim_t PropertyAnimation_0;
+    lv_anim_init(&PropertyAnimation_0);
+    lv_anim_set_time(&PropertyAnimation_0, 500);
+    lv_anim_set_user_data(&PropertyAnimation_0, PropertyAnimation_0_user_data);
+    lv_anim_set_custom_exec_cb(&PropertyAnimation_0, _ui_anim_callback_set_x);
+    lv_anim_set_values(&PropertyAnimation_0, 0, -200);
+    lv_anim_set_path_cb(&PropertyAnimation_0, lv_anim_path_linear);
+    lv_anim_set_delay(&PropertyAnimation_0, delay + 0);
+    lv_anim_set_deleted_cb(&PropertyAnimation_0, _ui_anim_callback_free_user_data);
+    lv_anim_set_playback_time(&PropertyAnimation_0, 0);
+    lv_anim_set_playback_delay(&PropertyAnimation_0, 0);
+    lv_anim_set_repeat_count(&PropertyAnimation_0, 0);
+    lv_anim_set_repeat_delay(&PropertyAnimation_0, 0);
+    lv_anim_set_early_apply(&PropertyAnimation_0, false);
+    lv_anim_start(&PropertyAnimation_0);
+    ui_anim_user_data_t * PropertyAnimation_1_user_data = lv_mem_alloc(sizeof(ui_anim_user_data_t));
+    PropertyAnimation_1_user_data->target = TargetObject;
+    PropertyAnimation_1_user_data->val = -1;
+    lv_anim_t PropertyAnimation_1;
+    lv_anim_init(&PropertyAnimation_1);
+    lv_anim_set_time(&PropertyAnimation_1, 500);
+    lv_anim_set_user_data(&PropertyAnimation_1, PropertyAnimation_1_user_data);
+    lv_anim_set_custom_exec_cb(&PropertyAnimation_1, _ui_anim_callback_set_y);
+    lv_anim_set_values(&PropertyAnimation_1, 0, 100);
+    lv_anim_set_path_cb(&PropertyAnimation_1, lv_anim_path_linear);
+    lv_anim_set_delay(&PropertyAnimation_1, delay + 0);
+    lv_anim_set_deleted_cb(&PropertyAnimation_1, _ui_anim_callback_free_user_data);
+    lv_anim_set_playback_time(&PropertyAnimation_1, 0);
+    lv_anim_set_playback_delay(&PropertyAnimation_1, 0);
+    lv_anim_set_repeat_count(&PropertyAnimation_1, 0);
+    lv_anim_set_repeat_delay(&PropertyAnimation_1, 0);
+    lv_anim_set_early_apply(&PropertyAnimation_1, false);
+    lv_anim_start(&PropertyAnimation_1);
+    ui_anim_user_data_t * PropertyAnimation_2_user_data = lv_mem_alloc(sizeof(ui_anim_user_data_t));
+    PropertyAnimation_2_user_data->target = TargetObject;
+    PropertyAnimation_2_user_data->val = -1;
+    lv_anim_t PropertyAnimation_2;
+    lv_anim_init(&PropertyAnimation_2);
+    lv_anim_set_time(&PropertyAnimation_2, 500);
+    lv_anim_set_user_data(&PropertyAnimation_2, PropertyAnimation_2_user_data);
+    lv_anim_set_custom_exec_cb(&PropertyAnimation_2, _ui_anim_callback_set_opacity);
+    lv_anim_set_values(&PropertyAnimation_2, 0, 255);
+    lv_anim_set_path_cb(&PropertyAnimation_2, lv_anim_path_linear);
+    lv_anim_set_delay(&PropertyAnimation_2, delay + 0);
+    lv_anim_set_deleted_cb(&PropertyAnimation_2, _ui_anim_callback_free_user_data);
+    lv_anim_set_playback_time(&PropertyAnimation_2, 0);
+    lv_anim_set_playback_delay(&PropertyAnimation_2, 0);
+    lv_anim_set_repeat_count(&PropertyAnimation_2, 0);
+    lv_anim_set_repeat_delay(&PropertyAnimation_2, 0);
+    lv_anim_set_early_apply(&PropertyAnimation_2, false);
+    lv_anim_start(&PropertyAnimation_2);
+
+}
+void LaundryRoomIconInit_Animation(lv_obj_t * TargetObject, int delay)
+{
+    ui_anim_user_data_t * PropertyAnimation_0_user_data = lv_mem_alloc(sizeof(ui_anim_user_data_t));
+    PropertyAnimation_0_user_data->target = TargetObject;
+    PropertyAnimation_0_user_data->val = -1;
+    lv_anim_t PropertyAnimation_0;
+    lv_anim_init(&PropertyAnimation_0);
+    lv_anim_set_time(&PropertyAnimation_0, 500);
+    lv_anim_set_user_data(&PropertyAnimation_0, PropertyAnimation_0_user_data);
+    lv_anim_set_custom_exec_cb(&PropertyAnimation_0, _ui_anim_callback_set_y);
+    lv_anim_set_values(&PropertyAnimation_0, 0, 140);
+    lv_anim_set_path_cb(&PropertyAnimation_0, lv_anim_path_linear);
+    lv_anim_set_delay(&PropertyAnimation_0, delay + 0);
+    lv_anim_set_deleted_cb(&PropertyAnimation_0, _ui_anim_callback_free_user_data);
+    lv_anim_set_playback_time(&PropertyAnimation_0, 0);
+    lv_anim_set_playback_delay(&PropertyAnimation_0, 0);
+    lv_anim_set_repeat_count(&PropertyAnimation_0, 0);
+    lv_anim_set_repeat_delay(&PropertyAnimation_0, 0);
+    lv_anim_set_early_apply(&PropertyAnimation_0, false);
+    lv_anim_start(&PropertyAnimation_0);
+    ui_anim_user_data_t * PropertyAnimation_1_user_data = lv_mem_alloc(sizeof(ui_anim_user_data_t));
+    PropertyAnimation_1_user_data->target = TargetObject;
+    PropertyAnimation_1_user_data->val = -1;
+    lv_anim_t PropertyAnimation_1;
+    lv_anim_init(&PropertyAnimation_1);
+    lv_anim_set_time(&PropertyAnimation_1, 500);
+    lv_anim_set_user_data(&PropertyAnimation_1, PropertyAnimation_1_user_data);
+    lv_anim_set_custom_exec_cb(&PropertyAnimation_1, _ui_anim_callback_set_opacity);
+    lv_anim_set_values(&PropertyAnimation_1, 0, 255);
+    lv_anim_set_path_cb(&PropertyAnimation_1, lv_anim_path_linear);
+    lv_anim_set_delay(&PropertyAnimation_1, delay + 0);
+    lv_anim_set_deleted_cb(&PropertyAnimation_1, _ui_anim_callback_free_user_data);
+    lv_anim_set_playback_time(&PropertyAnimation_1, 0);
+    lv_anim_set_playback_delay(&PropertyAnimation_1, 0);
+    lv_anim_set_repeat_count(&PropertyAnimation_1, 0);
+    lv_anim_set_repeat_delay(&PropertyAnimation_1, 0);
+    lv_anim_set_early_apply(&PropertyAnimation_1, false);
+    lv_anim_start(&PropertyAnimation_1);
+
+}
+void OfficeIconInit_Animation(lv_obj_t * TargetObject, int delay)
+{
+    ui_anim_user_data_t * PropertyAnimation_0_user_data = lv_mem_alloc(sizeof(ui_anim_user_data_t));
+    PropertyAnimation_0_user_data->target = TargetObject;
+    PropertyAnimation_0_user_data->val = -1;
+    lv_anim_t PropertyAnimation_0;
+    lv_anim_init(&PropertyAnimation_0);
+    lv_anim_set_time(&PropertyAnimation_0, 500);
+    lv_anim_set_user_data(&PropertyAnimation_0, PropertyAnimation_0_user_data);
+    lv_anim_set_custom_exec_cb(&PropertyAnimation_0, _ui_anim_callback_set_x);
+    lv_anim_set_values(&PropertyAnimation_0, 0, 200);
+    lv_anim_set_path_cb(&PropertyAnimation_0, lv_anim_path_linear);
+    lv_anim_set_delay(&PropertyAnimation_0, delay + 0);
+    lv_anim_set_deleted_cb(&PropertyAnimation_0, _ui_anim_callback_free_user_data);
+    lv_anim_set_playback_time(&PropertyAnimation_0, 0);
+    lv_anim_set_playback_delay(&PropertyAnimation_0, 0);
+    lv_anim_set_repeat_count(&PropertyAnimation_0, 0);
+    lv_anim_set_repeat_delay(&PropertyAnimation_0, 0);
+    lv_anim_set_early_apply(&PropertyAnimation_0, false);
+    lv_anim_start(&PropertyAnimation_0);
+    ui_anim_user_data_t * PropertyAnimation_1_user_data = lv_mem_alloc(sizeof(ui_anim_user_data_t));
+    PropertyAnimation_1_user_data->target = TargetObject;
+    PropertyAnimation_1_user_data->val = -1;
+    lv_anim_t PropertyAnimation_1;
+    lv_anim_init(&PropertyAnimation_1);
+    lv_anim_set_time(&PropertyAnimation_1, 500);
+    lv_anim_set_user_data(&PropertyAnimation_1, PropertyAnimation_1_user_data);
+    lv_anim_set_custom_exec_cb(&PropertyAnimation_1, _ui_anim_callback_set_y);
+    lv_anim_set_values(&PropertyAnimation_1, 0, 100);
+    lv_anim_set_path_cb(&PropertyAnimation_1, lv_anim_path_linear);
+    lv_anim_set_delay(&PropertyAnimation_1, delay + 0);
+    lv_anim_set_deleted_cb(&PropertyAnimation_1, _ui_anim_callback_free_user_data);
+    lv_anim_set_playback_time(&PropertyAnimation_1, 0);
+    lv_anim_set_playback_delay(&PropertyAnimation_1, 0);
+    lv_anim_set_repeat_count(&PropertyAnimation_1, 0);
+    lv_anim_set_repeat_delay(&PropertyAnimation_1, 0);
+    lv_anim_set_early_apply(&PropertyAnimation_1, false);
+    lv_anim_start(&PropertyAnimation_1);
+    ui_anim_user_data_t * PropertyAnimation_2_user_data = lv_mem_alloc(sizeof(ui_anim_user_data_t));
+    PropertyAnimation_2_user_data->target = TargetObject;
+    PropertyAnimation_2_user_data->val = -1;
+    lv_anim_t PropertyAnimation_2;
+    lv_anim_init(&PropertyAnimation_2);
+    lv_anim_set_time(&PropertyAnimation_2, 500);
+    lv_anim_set_user_data(&PropertyAnimation_2, PropertyAnimation_2_user_data);
+    lv_anim_set_custom_exec_cb(&PropertyAnimation_2, _ui_anim_callback_set_opacity);
+    lv_anim_set_values(&PropertyAnimation_2, 0, 255);
+    lv_anim_set_path_cb(&PropertyAnimation_2, lv_anim_path_linear);
+    lv_anim_set_delay(&PropertyAnimation_2, delay + 0);
+    lv_anim_set_deleted_cb(&PropertyAnimation_2, _ui_anim_callback_free_user_data);
+    lv_anim_set_playback_time(&PropertyAnimation_2, 0);
+    lv_anim_set_playback_delay(&PropertyAnimation_2, 0);
+    lv_anim_set_repeat_count(&PropertyAnimation_2, 0);
+    lv_anim_set_repeat_delay(&PropertyAnimation_2, 0);
+    lv_anim_set_early_apply(&PropertyAnimation_2, false);
+    lv_anim_start(&PropertyAnimation_2);
+
+}
+void KitchenIconReset_Animation(lv_obj_t * TargetObject, int delay)
+{
+    ui_anim_user_data_t * PropertyAnimation_0_user_data = lv_mem_alloc(sizeof(ui_anim_user_data_t));
+    PropertyAnimation_0_user_data->target = TargetObject;
+    PropertyAnimation_0_user_data->val = -1;
+    lv_anim_t PropertyAnimation_0;
+    lv_anim_init(&PropertyAnimation_0);
+    lv_anim_set_time(&PropertyAnimation_0, 500);
+    lv_anim_set_user_data(&PropertyAnimation_0, PropertyAnimation_0_user_data);
+    lv_anim_set_custom_exec_cb(&PropertyAnimation_0, _ui_anim_callback_set_x);
+    lv_anim_set_values(&PropertyAnimation_0, -200, 0);
+    lv_anim_set_path_cb(&PropertyAnimation_0, lv_anim_path_linear);
+    lv_anim_set_delay(&PropertyAnimation_0, delay + 0);
+    lv_anim_set_deleted_cb(&PropertyAnimation_0, _ui_anim_callback_free_user_data);
+    lv_anim_set_playback_time(&PropertyAnimation_0, 0);
+    lv_anim_set_playback_delay(&PropertyAnimation_0, 0);
+    lv_anim_set_repeat_count(&PropertyAnimation_0, 0);
+    lv_anim_set_repeat_delay(&PropertyAnimation_0, 0);
+    lv_anim_set_early_apply(&PropertyAnimation_0, false);
+    lv_anim_start(&PropertyAnimation_0);
+    ui_anim_user_data_t * PropertyAnimation_1_user_data = lv_mem_alloc(sizeof(ui_anim_user_data_t));
+    PropertyAnimation_1_user_data->target = TargetObject;
+    PropertyAnimation_1_user_data->val = -1;
+    lv_anim_t PropertyAnimation_1;
+    lv_anim_init(&PropertyAnimation_1);
+    lv_anim_set_time(&PropertyAnimation_1, 500);
+    lv_anim_set_user_data(&PropertyAnimation_1, PropertyAnimation_1_user_data);
+    lv_anim_set_custom_exec_cb(&PropertyAnimation_1, _ui_anim_callback_set_y);
+    lv_anim_set_values(&PropertyAnimation_1, -100, 0);
+    lv_anim_set_path_cb(&PropertyAnimation_1, lv_anim_path_linear);
+    lv_anim_set_delay(&PropertyAnimation_1, delay + 0);
+    lv_anim_set_deleted_cb(&PropertyAnimation_1, _ui_anim_callback_free_user_data);
+    lv_anim_set_playback_time(&PropertyAnimation_1, 0);
+    lv_anim_set_playback_delay(&PropertyAnimation_1, 0);
+    lv_anim_set_repeat_count(&PropertyAnimation_1, 0);
+    lv_anim_set_repeat_delay(&PropertyAnimation_1, 0);
+    lv_anim_set_early_apply(&PropertyAnimation_1, false);
+    lv_anim_start(&PropertyAnimation_1);
+    ui_anim_user_data_t * PropertyAnimation_2_user_data = lv_mem_alloc(sizeof(ui_anim_user_data_t));
+    PropertyAnimation_2_user_data->target = TargetObject;
+    PropertyAnimation_2_user_data->val = -1;
+    lv_anim_t PropertyAnimation_2;
+    lv_anim_init(&PropertyAnimation_2);
+    lv_anim_set_time(&PropertyAnimation_2, 500);
+    lv_anim_set_user_data(&PropertyAnimation_2, PropertyAnimation_2_user_data);
+    lv_anim_set_custom_exec_cb(&PropertyAnimation_2, _ui_anim_callback_set_opacity);
+    lv_anim_set_values(&PropertyAnimation_2, 255, 0);
+    lv_anim_set_path_cb(&PropertyAnimation_2, lv_anim_path_linear);
+    lv_anim_set_delay(&PropertyAnimation_2, delay + 0);
+    lv_anim_set_deleted_cb(&PropertyAnimation_2, _ui_anim_callback_free_user_data);
+    lv_anim_set_playback_time(&PropertyAnimation_2, 0);
+    lv_anim_set_playback_delay(&PropertyAnimation_2, 0);
+    lv_anim_set_repeat_count(&PropertyAnimation_2, 0);
+    lv_anim_set_repeat_delay(&PropertyAnimation_2, 0);
+    lv_anim_set_early_apply(&PropertyAnimation_2, false);
+    lv_anim_start(&PropertyAnimation_2);
+
+}
+void LivingRoomIconReset_Animation(lv_obj_t * TargetObject, int delay)
+{
+    ui_anim_user_data_t * PropertyAnimation_0_user_data = lv_mem_alloc(sizeof(ui_anim_user_data_t));
+    PropertyAnimation_0_user_data->target = TargetObject;
+    PropertyAnimation_0_user_data->val = -1;
+    lv_anim_t PropertyAnimation_0;
+    lv_anim_init(&PropertyAnimation_0);
+    lv_anim_set_time(&PropertyAnimation_0, 500);
+    lv_anim_set_user_data(&PropertyAnimation_0, PropertyAnimation_0_user_data);
+    lv_anim_set_custom_exec_cb(&PropertyAnimation_0, _ui_anim_callback_set_y);
+    lv_anim_set_values(&PropertyAnimation_0, -145, 0);
+    lv_anim_set_path_cb(&PropertyAnimation_0, lv_anim_path_linear);
+    lv_anim_set_delay(&PropertyAnimation_0, delay + 0);
+    lv_anim_set_deleted_cb(&PropertyAnimation_0, _ui_anim_callback_free_user_data);
+    lv_anim_set_playback_time(&PropertyAnimation_0, 0);
+    lv_anim_set_playback_delay(&PropertyAnimation_0, 0);
+    lv_anim_set_repeat_count(&PropertyAnimation_0, 0);
+    lv_anim_set_repeat_delay(&PropertyAnimation_0, 0);
+    lv_anim_set_early_apply(&PropertyAnimation_0, false);
+    lv_anim_start(&PropertyAnimation_0);
+    ui_anim_user_data_t * PropertyAnimation_1_user_data = lv_mem_alloc(sizeof(ui_anim_user_data_t));
+    PropertyAnimation_1_user_data->target = TargetObject;
+    PropertyAnimation_1_user_data->val = -1;
+    lv_anim_t PropertyAnimation_1;
+    lv_anim_init(&PropertyAnimation_1);
+    lv_anim_set_time(&PropertyAnimation_1, 500);
+    lv_anim_set_user_data(&PropertyAnimation_1, PropertyAnimation_1_user_data);
+    lv_anim_set_custom_exec_cb(&PropertyAnimation_1, _ui_anim_callback_set_opacity);
+    lv_anim_set_values(&PropertyAnimation_1, 255, 0);
+    lv_anim_set_path_cb(&PropertyAnimation_1, lv_anim_path_linear);
+    lv_anim_set_delay(&PropertyAnimation_1, delay + 0);
+    lv_anim_set_deleted_cb(&PropertyAnimation_1, _ui_anim_callback_free_user_data);
+    lv_anim_set_playback_time(&PropertyAnimation_1, 0);
+    lv_anim_set_playback_delay(&PropertyAnimation_1, 0);
+    lv_anim_set_repeat_count(&PropertyAnimation_1, 0);
+    lv_anim_set_repeat_delay(&PropertyAnimation_1, 0);
+    lv_anim_set_early_apply(&PropertyAnimation_1, false);
+    lv_anim_start(&PropertyAnimation_1);
+
+}
+void MasterBedRoomIconReset_Animation(lv_obj_t * TargetObject, int delay)
+{
+    ui_anim_user_data_t * PropertyAnimation_0_user_data = lv_mem_alloc(sizeof(ui_anim_user_data_t));
+    PropertyAnimation_0_user_data->target = TargetObject;
+    PropertyAnimation_0_user_data->val = -1;
+    lv_anim_t PropertyAnimation_0;
+    lv_anim_init(&PropertyAnimation_0);
+    lv_anim_set_time(&PropertyAnimation_0, 500);
+    lv_anim_set_user_data(&PropertyAnimation_0, PropertyAnimation_0_user_data);
+    lv_anim_set_custom_exec_cb(&PropertyAnimation_0, _ui_anim_callback_set_x);
+    lv_anim_set_values(&PropertyAnimation_0, 200, 0);
+    lv_anim_set_path_cb(&PropertyAnimation_0, lv_anim_path_linear);
+    lv_anim_set_delay(&PropertyAnimation_0, delay + 0);
+    lv_anim_set_deleted_cb(&PropertyAnimation_0, _ui_anim_callback_free_user_data);
+    lv_anim_set_playback_time(&PropertyAnimation_0, 0);
+    lv_anim_set_playback_delay(&PropertyAnimation_0, 0);
+    lv_anim_set_repeat_count(&PropertyAnimation_0, 0);
+    lv_anim_set_repeat_delay(&PropertyAnimation_0, 0);
+    lv_anim_set_early_apply(&PropertyAnimation_0, false);
+    lv_anim_start(&PropertyAnimation_0);
+    ui_anim_user_data_t * PropertyAnimation_1_user_data = lv_mem_alloc(sizeof(ui_anim_user_data_t));
+    PropertyAnimation_1_user_data->target = TargetObject;
+    PropertyAnimation_1_user_data->val = -1;
+    lv_anim_t PropertyAnimation_1;
+    lv_anim_init(&PropertyAnimation_1);
+    lv_anim_set_time(&PropertyAnimation_1, 500);
+    lv_anim_set_user_data(&PropertyAnimation_1, PropertyAnimation_1_user_data);
+    lv_anim_set_custom_exec_cb(&PropertyAnimation_1, _ui_anim_callback_set_y);
+    lv_anim_set_values(&PropertyAnimation_1, -100, 0);
+    lv_anim_set_path_cb(&PropertyAnimation_1, lv_anim_path_linear);
+    lv_anim_set_delay(&PropertyAnimation_1, delay + 0);
+    lv_anim_set_deleted_cb(&PropertyAnimation_1, _ui_anim_callback_free_user_data);
+    lv_anim_set_playback_time(&PropertyAnimation_1, 0);
+    lv_anim_set_playback_delay(&PropertyAnimation_1, 0);
+    lv_anim_set_repeat_count(&PropertyAnimation_1, 0);
+    lv_anim_set_repeat_delay(&PropertyAnimation_1, 0);
+    lv_anim_set_early_apply(&PropertyAnimation_1, false);
+    lv_anim_start(&PropertyAnimation_1);
+    ui_anim_user_data_t * PropertyAnimation_2_user_data = lv_mem_alloc(sizeof(ui_anim_user_data_t));
+    PropertyAnimation_2_user_data->target = TargetObject;
+    PropertyAnimation_2_user_data->val = -1;
+    lv_anim_t PropertyAnimation_2;
+    lv_anim_init(&PropertyAnimation_2);
+    lv_anim_set_time(&PropertyAnimation_2, 500);
+    lv_anim_set_user_data(&PropertyAnimation_2, PropertyAnimation_2_user_data);
+    lv_anim_set_custom_exec_cb(&PropertyAnimation_2, _ui_anim_callback_set_opacity);
+    lv_anim_set_values(&PropertyAnimation_2, 255, 0);
+    lv_anim_set_path_cb(&PropertyAnimation_2, lv_anim_path_linear);
+    lv_anim_set_delay(&PropertyAnimation_2, delay + 0);
+    lv_anim_set_deleted_cb(&PropertyAnimation_2, _ui_anim_callback_free_user_data);
+    lv_anim_set_playback_time(&PropertyAnimation_2, 0);
+    lv_anim_set_playback_delay(&PropertyAnimation_2, 0);
+    lv_anim_set_repeat_count(&PropertyAnimation_2, 0);
+    lv_anim_set_repeat_delay(&PropertyAnimation_2, 0);
+    lv_anim_set_early_apply(&PropertyAnimation_2, false);
+    lv_anim_start(&PropertyAnimation_2);
+
+}
+void BedRoomIconReset_Animation(lv_obj_t * TargetObject, int delay)
+{
+    ui_anim_user_data_t * PropertyAnimation_0_user_data = lv_mem_alloc(sizeof(ui_anim_user_data_t));
+    PropertyAnimation_0_user_data->target = TargetObject;
+    PropertyAnimation_0_user_data->val = -1;
+    lv_anim_t PropertyAnimation_0;
+    lv_anim_init(&PropertyAnimation_0);
+    lv_anim_set_time(&PropertyAnimation_0, 500);
+    lv_anim_set_user_data(&PropertyAnimation_0, PropertyAnimation_0_user_data);
+    lv_anim_set_custom_exec_cb(&PropertyAnimation_0, _ui_anim_callback_set_x);
+    lv_anim_set_values(&PropertyAnimation_0, -200, 0);
+    lv_anim_set_path_cb(&PropertyAnimation_0, lv_anim_path_linear);
+    lv_anim_set_delay(&PropertyAnimation_0, delay + 0);
+    lv_anim_set_deleted_cb(&PropertyAnimation_0, _ui_anim_callback_free_user_data);
+    lv_anim_set_playback_time(&PropertyAnimation_0, 0);
+    lv_anim_set_playback_delay(&PropertyAnimation_0, 0);
+    lv_anim_set_repeat_count(&PropertyAnimation_0, 0);
+    lv_anim_set_repeat_delay(&PropertyAnimation_0, 0);
+    lv_anim_set_early_apply(&PropertyAnimation_0, false);
+    lv_anim_start(&PropertyAnimation_0);
+    ui_anim_user_data_t * PropertyAnimation_1_user_data = lv_mem_alloc(sizeof(ui_anim_user_data_t));
+    PropertyAnimation_1_user_data->target = TargetObject;
+    PropertyAnimation_1_user_data->val = -1;
+    lv_anim_t PropertyAnimation_1;
+    lv_anim_init(&PropertyAnimation_1);
+    lv_anim_set_time(&PropertyAnimation_1, 1000);
+    lv_anim_set_user_data(&PropertyAnimation_1, PropertyAnimation_1_user_data);
+    lv_anim_set_custom_exec_cb(&PropertyAnimation_1, _ui_anim_callback_set_y);
+    lv_anim_set_values(&PropertyAnimation_1, 100, 0);
+    lv_anim_set_path_cb(&PropertyAnimation_1, lv_anim_path_linear);
+    lv_anim_set_delay(&PropertyAnimation_1, delay + 0);
+    lv_anim_set_deleted_cb(&PropertyAnimation_1, _ui_anim_callback_free_user_data);
+    lv_anim_set_playback_time(&PropertyAnimation_1, 0);
+    lv_anim_set_playback_delay(&PropertyAnimation_1, 0);
+    lv_anim_set_repeat_count(&PropertyAnimation_1, 0);
+    lv_anim_set_repeat_delay(&PropertyAnimation_1, 0);
+    lv_anim_set_early_apply(&PropertyAnimation_1, false);
+    lv_anim_start(&PropertyAnimation_1);
+    ui_anim_user_data_t * PropertyAnimation_2_user_data = lv_mem_alloc(sizeof(ui_anim_user_data_t));
+    PropertyAnimation_2_user_data->target = TargetObject;
+    PropertyAnimation_2_user_data->val = -1;
+    lv_anim_t PropertyAnimation_2;
+    lv_anim_init(&PropertyAnimation_2);
+    lv_anim_set_time(&PropertyAnimation_2, 500);
+    lv_anim_set_user_data(&PropertyAnimation_2, PropertyAnimation_2_user_data);
+    lv_anim_set_custom_exec_cb(&PropertyAnimation_2, _ui_anim_callback_set_opacity);
+    lv_anim_set_values(&PropertyAnimation_2, 255, 0);
+    lv_anim_set_path_cb(&PropertyAnimation_2, lv_anim_path_linear);
+    lv_anim_set_delay(&PropertyAnimation_2, delay + 0);
+    lv_anim_set_deleted_cb(&PropertyAnimation_2, _ui_anim_callback_free_user_data);
+    lv_anim_set_playback_time(&PropertyAnimation_2, 0);
+    lv_anim_set_playback_delay(&PropertyAnimation_2, 0);
+    lv_anim_set_repeat_count(&PropertyAnimation_2, 0);
+    lv_anim_set_repeat_delay(&PropertyAnimation_2, 0);
+    lv_anim_set_early_apply(&PropertyAnimation_2, false);
+    lv_anim_start(&PropertyAnimation_2);
+
+}
+void LaundryRoomIconReset_Animation(lv_obj_t * TargetObject, int delay)
+{
+    ui_anim_user_data_t * PropertyAnimation_0_user_data = lv_mem_alloc(sizeof(ui_anim_user_data_t));
+    PropertyAnimation_0_user_data->target = TargetObject;
+    PropertyAnimation_0_user_data->val = -1;
+    lv_anim_t PropertyAnimation_0;
+    lv_anim_init(&PropertyAnimation_0);
+    lv_anim_set_time(&PropertyAnimation_0, 1000);
+    lv_anim_set_user_data(&PropertyAnimation_0, PropertyAnimation_0_user_data);
+    lv_anim_set_custom_exec_cb(&PropertyAnimation_0, _ui_anim_callback_set_y);
+    lv_anim_set_values(&PropertyAnimation_0, 140, 0);
+    lv_anim_set_path_cb(&PropertyAnimation_0, lv_anim_path_linear);
+    lv_anim_set_delay(&PropertyAnimation_0, delay + 0);
+    lv_anim_set_deleted_cb(&PropertyAnimation_0, _ui_anim_callback_free_user_data);
+    lv_anim_set_playback_time(&PropertyAnimation_0, 0);
+    lv_anim_set_playback_delay(&PropertyAnimation_0, 0);
+    lv_anim_set_repeat_count(&PropertyAnimation_0, 0);
+    lv_anim_set_repeat_delay(&PropertyAnimation_0, 0);
+    lv_anim_set_early_apply(&PropertyAnimation_0, false);
+    lv_anim_start(&PropertyAnimation_0);
+    ui_anim_user_data_t * PropertyAnimation_1_user_data = lv_mem_alloc(sizeof(ui_anim_user_data_t));
+    PropertyAnimation_1_user_data->target = TargetObject;
+    PropertyAnimation_1_user_data->val = -1;
+    lv_anim_t PropertyAnimation_1;
+    lv_anim_init(&PropertyAnimation_1);
+    lv_anim_set_time(&PropertyAnimation_1, 500);
+    lv_anim_set_user_data(&PropertyAnimation_1, PropertyAnimation_1_user_data);
+    lv_anim_set_custom_exec_cb(&PropertyAnimation_1, _ui_anim_callback_set_opacity);
+    lv_anim_set_values(&PropertyAnimation_1, 255, 0);
+    lv_anim_set_path_cb(&PropertyAnimation_1, lv_anim_path_linear);
+    lv_anim_set_delay(&PropertyAnimation_1, delay + 0);
+    lv_anim_set_deleted_cb(&PropertyAnimation_1, _ui_anim_callback_free_user_data);
+    lv_anim_set_playback_time(&PropertyAnimation_1, 0);
+    lv_anim_set_playback_delay(&PropertyAnimation_1, 0);
+    lv_anim_set_repeat_count(&PropertyAnimation_1, 0);
+    lv_anim_set_repeat_delay(&PropertyAnimation_1, 0);
+    lv_anim_set_early_apply(&PropertyAnimation_1, false);
+    lv_anim_start(&PropertyAnimation_1);
+
+}
+void OfficeIconReset_Animation(lv_obj_t * TargetObject, int delay)
+{
+    ui_anim_user_data_t * PropertyAnimation_0_user_data = lv_mem_alloc(sizeof(ui_anim_user_data_t));
+    PropertyAnimation_0_user_data->target = TargetObject;
+    PropertyAnimation_0_user_data->val = -1;
+    lv_anim_t PropertyAnimation_0;
+    lv_anim_init(&PropertyAnimation_0);
+    lv_anim_set_time(&PropertyAnimation_0, 500);
+    lv_anim_set_user_data(&PropertyAnimation_0, PropertyAnimation_0_user_data);
+    lv_anim_set_custom_exec_cb(&PropertyAnimation_0, _ui_anim_callback_set_x);
+    lv_anim_set_values(&PropertyAnimation_0, 280, 0);
+    lv_anim_set_path_cb(&PropertyAnimation_0, lv_anim_path_linear);
+    lv_anim_set_delay(&PropertyAnimation_0, delay + 0);
+    lv_anim_set_deleted_cb(&PropertyAnimation_0, _ui_anim_callback_free_user_data);
+    lv_anim_set_playback_time(&PropertyAnimation_0, 0);
+    lv_anim_set_playback_delay(&PropertyAnimation_0, 0);
+    lv_anim_set_repeat_count(&PropertyAnimation_0, 0);
+    lv_anim_set_repeat_delay(&PropertyAnimation_0, 0);
+    lv_anim_set_early_apply(&PropertyAnimation_0, false);
+    lv_anim_start(&PropertyAnimation_0);
+    ui_anim_user_data_t * PropertyAnimation_1_user_data = lv_mem_alloc(sizeof(ui_anim_user_data_t));
+    PropertyAnimation_1_user_data->target = TargetObject;
+    PropertyAnimation_1_user_data->val = -1;
+    lv_anim_t PropertyAnimation_1;
+    lv_anim_init(&PropertyAnimation_1);
+    lv_anim_set_time(&PropertyAnimation_1, 1000);
+    lv_anim_set_user_data(&PropertyAnimation_1, PropertyAnimation_1_user_data);
+    lv_anim_set_custom_exec_cb(&PropertyAnimation_1, _ui_anim_callback_set_y);
+    lv_anim_set_values(&PropertyAnimation_1, 100, 0);
+    lv_anim_set_path_cb(&PropertyAnimation_1, lv_anim_path_linear);
+    lv_anim_set_delay(&PropertyAnimation_1, delay + 0);
+    lv_anim_set_deleted_cb(&PropertyAnimation_1, _ui_anim_callback_free_user_data);
+    lv_anim_set_playback_time(&PropertyAnimation_1, 0);
+    lv_anim_set_playback_delay(&PropertyAnimation_1, 0);
+    lv_anim_set_repeat_count(&PropertyAnimation_1, 0);
+    lv_anim_set_repeat_delay(&PropertyAnimation_1, 0);
+    lv_anim_set_early_apply(&PropertyAnimation_1, false);
+    lv_anim_start(&PropertyAnimation_1);
+    ui_anim_user_data_t * PropertyAnimation_2_user_data = lv_mem_alloc(sizeof(ui_anim_user_data_t));
+    PropertyAnimation_2_user_data->target = TargetObject;
+    PropertyAnimation_2_user_data->val = -1;
+    lv_anim_t PropertyAnimation_2;
+    lv_anim_init(&PropertyAnimation_2);
+    lv_anim_set_time(&PropertyAnimation_2, 500);
+    lv_anim_set_user_data(&PropertyAnimation_2, PropertyAnimation_2_user_data);
+    lv_anim_set_custom_exec_cb(&PropertyAnimation_2, _ui_anim_callback_set_opacity);
+    lv_anim_set_values(&PropertyAnimation_2, 255, 0);
+    lv_anim_set_path_cb(&PropertyAnimation_2, lv_anim_path_linear);
+    lv_anim_set_delay(&PropertyAnimation_2, delay + 0);
+    lv_anim_set_deleted_cb(&PropertyAnimation_2, _ui_anim_callback_free_user_data);
+    lv_anim_set_playback_time(&PropertyAnimation_2, 0);
+    lv_anim_set_playback_delay(&PropertyAnimation_2, 0);
+    lv_anim_set_repeat_count(&PropertyAnimation_2, 0);
+    lv_anim_set_repeat_delay(&PropertyAnimation_2, 0);
+    lv_anim_set_early_apply(&PropertyAnimation_2, false);
+    lv_anim_start(&PropertyAnimation_2);
+
+}
+void TitleInit_Animation(lv_obj_t * TargetObject, int delay)
+{
+    ui_anim_user_data_t * PropertyAnimation_0_user_data = lv_mem_alloc(sizeof(ui_anim_user_data_t));
+    PropertyAnimation_0_user_data->target = TargetObject;
+    PropertyAnimation_0_user_data->val = -1;
+    lv_anim_t PropertyAnimation_0;
+    lv_anim_init(&PropertyAnimation_0);
+    lv_anim_set_time(&PropertyAnimation_0, 500);
+    lv_anim_set_user_data(&PropertyAnimation_0, PropertyAnimation_0_user_data);
+    lv_anim_set_custom_exec_cb(&PropertyAnimation_0, _ui_anim_callback_set_x);
+    lv_anim_set_values(&PropertyAnimation_0, -550, -206);
+    lv_anim_set_path_cb(&PropertyAnimation_0, lv_anim_path_linear);
+    lv_anim_set_delay(&PropertyAnimation_0, delay + 0);
+    lv_anim_set_deleted_cb(&PropertyAnimation_0, _ui_anim_callback_free_user_data);
+    lv_anim_set_playback_time(&PropertyAnimation_0, 0);
+    lv_anim_set_playback_delay(&PropertyAnimation_0, 0);
+    lv_anim_set_repeat_count(&PropertyAnimation_0, 0);
+    lv_anim_set_repeat_delay(&PropertyAnimation_0, 0);
+    lv_anim_set_early_apply(&PropertyAnimation_0, false);
+    lv_anim_start(&PropertyAnimation_0);
+
+}
+void SubTitleInit_Animation(lv_obj_t * TargetObject, int delay)
+{
+    ui_anim_user_data_t * PropertyAnimation_0_user_data = lv_mem_alloc(sizeof(ui_anim_user_data_t));
+    PropertyAnimation_0_user_data->target = TargetObject;
+    PropertyAnimation_0_user_data->val = -1;
+    lv_anim_t PropertyAnimation_0;
+    lv_anim_init(&PropertyAnimation_0);
+    lv_anim_set_time(&PropertyAnimation_0, 1000);
+    lv_anim_set_user_data(&PropertyAnimation_0, PropertyAnimation_0_user_data);
+    lv_anim_set_custom_exec_cb(&PropertyAnimation_0, _ui_anim_callback_set_x);
+    lv_anim_set_values(&PropertyAnimation_0, -510, -172);
+    lv_anim_set_path_cb(&PropertyAnimation_0, lv_anim_path_linear);
+    lv_anim_set_delay(&PropertyAnimation_0, delay + 0);
+    lv_anim_set_deleted_cb(&PropertyAnimation_0, _ui_anim_callback_free_user_data);
+    lv_anim_set_playback_time(&PropertyAnimation_0, 0);
+    lv_anim_set_playback_delay(&PropertyAnimation_0, 0);
+    lv_anim_set_repeat_count(&PropertyAnimation_0, 0);
+    lv_anim_set_repeat_delay(&PropertyAnimation_0, 0);
+    lv_anim_set_early_apply(&PropertyAnimation_0, false);
+    lv_anim_start(&PropertyAnimation_0);
+
+}
+void AuthorInit_Animation(lv_obj_t * TargetObject, int delay)
+{
+    ui_anim_user_data_t * PropertyAnimation_0_user_data = lv_mem_alloc(sizeof(ui_anim_user_data_t));
+    PropertyAnimation_0_user_data->target = TargetObject;
+    PropertyAnimation_0_user_data->val = -1;
+    lv_anim_t PropertyAnimation_0;
+    lv_anim_init(&PropertyAnimation_0);
+    lv_anim_set_time(&PropertyAnimation_0, 600);
+    lv_anim_set_user_data(&PropertyAnimation_0, PropertyAnimation_0_user_data);
+    lv_anim_set_custom_exec_cb(&PropertyAnimation_0, _ui_anim_callback_set_y);
+    lv_anim_set_values(&PropertyAnimation_0, 250, 228);
+    lv_anim_set_path_cb(&PropertyAnimation_0, lv_anim_path_linear);
+    lv_anim_set_delay(&PropertyAnimation_0, delay + 0);
+    lv_anim_set_deleted_cb(&PropertyAnimation_0, _ui_anim_callback_free_user_data);
+    lv_anim_set_playback_time(&PropertyAnimation_0, 0);
+    lv_anim_set_playback_delay(&PropertyAnimation_0, 0);
+    lv_anim_set_repeat_count(&PropertyAnimation_0, 0);
+    lv_anim_set_repeat_delay(&PropertyAnimation_0, 0);
+    lv_anim_set_early_apply(&PropertyAnimation_0, false);
+    lv_anim_start(&PropertyAnimation_0);
+
+}
+void TinyHouseIconInit_Animation(lv_obj_t * TargetObject, int delay)
+{
+    ui_anim_user_data_t * PropertyAnimation_0_user_data = lv_mem_alloc(sizeof(ui_anim_user_data_t));
+    PropertyAnimation_0_user_data->target = TargetObject;
+    PropertyAnimation_0_user_data->val = -1;
+    lv_anim_t PropertyAnimation_0;
+    lv_anim_init(&PropertyAnimation_0);
+    lv_anim_set_time(&PropertyAnimation_0, 2500);
+    lv_anim_set_user_data(&PropertyAnimation_0, PropertyAnimation_0_user_data);
+    lv_anim_set_custom_exec_cb(&PropertyAnimation_0, _ui_anim_callback_set_opacity);
+    lv_anim_set_values(&PropertyAnimation_0, 0, 255);
+    lv_anim_set_path_cb(&PropertyAnimation_0, lv_anim_path_linear);
+    lv_anim_set_delay(&PropertyAnimation_0, delay + 0);
+    lv_anim_set_deleted_cb(&PropertyAnimation_0, _ui_anim_callback_free_user_data);
+    lv_anim_set_playback_time(&PropertyAnimation_0, 0);
+    lv_anim_set_playback_delay(&PropertyAnimation_0, 0);
+    lv_anim_set_repeat_count(&PropertyAnimation_0, 0);
+    lv_anim_set_repeat_delay(&PropertyAnimation_0, 0);
+    lv_anim_set_early_apply(&PropertyAnimation_0, false);
+    lv_anim_start(&PropertyAnimation_0);
+
+}
+void RoomLabelInit_Animation(lv_obj_t * TargetObject, int delay)
+{
+    ui_anim_user_data_t * PropertyAnimation_0_user_data = lv_mem_alloc(sizeof(ui_anim_user_data_t));
+    PropertyAnimation_0_user_data->target = TargetObject;
+    PropertyAnimation_0_user_data->val = -1;
+    lv_anim_t PropertyAnimation_0;
+    lv_anim_init(&PropertyAnimation_0);
+    lv_anim_set_time(&PropertyAnimation_0, 1000);
+    lv_anim_set_user_data(&PropertyAnimation_0, PropertyAnimation_0_user_data);
+    lv_anim_set_custom_exec_cb(&PropertyAnimation_0, _ui_anim_callback_set_opacity);
+    lv_anim_set_values(&PropertyAnimation_0, 0, 255);
+    lv_anim_set_path_cb(&PropertyAnimation_0, lv_anim_path_linear);
+    lv_anim_set_delay(&PropertyAnimation_0, delay + 0);
+    lv_anim_set_deleted_cb(&PropertyAnimation_0, _ui_anim_callback_free_user_data);
+    lv_anim_set_playback_time(&PropertyAnimation_0, 0);
+    lv_anim_set_playback_delay(&PropertyAnimation_0, 0);
+    lv_anim_set_repeat_count(&PropertyAnimation_0, 0);
+    lv_anim_set_repeat_delay(&PropertyAnimation_0, 0);
+    lv_anim_set_early_apply(&PropertyAnimation_0, false);
+    lv_anim_start(&PropertyAnimation_0);
+
+}
+void TitleReset_Animation(lv_obj_t * TargetObject, int delay)
+{
+    ui_anim_user_data_t * PropertyAnimation_0_user_data = lv_mem_alloc(sizeof(ui_anim_user_data_t));
+    PropertyAnimation_0_user_data->target = TargetObject;
+    PropertyAnimation_0_user_data->val = -1;
+    lv_anim_t PropertyAnimation_0;
+    lv_anim_init(&PropertyAnimation_0);
+    lv_anim_set_time(&PropertyAnimation_0, 500);
+    lv_anim_set_user_data(&PropertyAnimation_0, PropertyAnimation_0_user_data);
+    lv_anim_set_custom_exec_cb(&PropertyAnimation_0, _ui_anim_callback_set_x);
+    lv_anim_set_values(&PropertyAnimation_0, -206, -550);
+    lv_anim_set_path_cb(&PropertyAnimation_0, lv_anim_path_linear);
+    lv_anim_set_delay(&PropertyAnimation_0, delay + 0);
+    lv_anim_set_deleted_cb(&PropertyAnimation_0, _ui_anim_callback_free_user_data);
+    lv_anim_set_playback_time(&PropertyAnimation_0, 0);
+    lv_anim_set_playback_delay(&PropertyAnimation_0, 0);
+    lv_anim_set_repeat_count(&PropertyAnimation_0, 0);
+    lv_anim_set_repeat_delay(&PropertyAnimation_0, 0);
+    lv_anim_set_early_apply(&PropertyAnimation_0, false);
+    lv_anim_start(&PropertyAnimation_0);
+
+}
+void SubTitleReset_Animation(lv_obj_t * TargetObject, int delay)
+{
+    ui_anim_user_data_t * PropertyAnimation_0_user_data = lv_mem_alloc(sizeof(ui_anim_user_data_t));
+    PropertyAnimation_0_user_data->target = TargetObject;
+    PropertyAnimation_0_user_data->val = -1;
+    lv_anim_t PropertyAnimation_0;
+    lv_anim_init(&PropertyAnimation_0);
+    lv_anim_set_time(&PropertyAnimation_0, 1000);
+    lv_anim_set_user_data(&PropertyAnimation_0, PropertyAnimation_0_user_data);
+    lv_anim_set_custom_exec_cb(&PropertyAnimation_0, _ui_anim_callback_set_x);
+    lv_anim_set_values(&PropertyAnimation_0, -172, -510);
+    lv_anim_set_path_cb(&PropertyAnimation_0, lv_anim_path_linear);
+    lv_anim_set_delay(&PropertyAnimation_0, delay + 0);
+    lv_anim_set_deleted_cb(&PropertyAnimation_0, _ui_anim_callback_free_user_data);
+    lv_anim_set_playback_time(&PropertyAnimation_0, 0);
+    lv_anim_set_playback_delay(&PropertyAnimation_0, 0);
+    lv_anim_set_repeat_count(&PropertyAnimation_0, 0);
+    lv_anim_set_repeat_delay(&PropertyAnimation_0, 0);
+    lv_anim_set_early_apply(&PropertyAnimation_0, false);
+    lv_anim_start(&PropertyAnimation_0);
+
+}
+void AuthorReset_Animation(lv_obj_t * TargetObject, int delay)
+{
+    ui_anim_user_data_t * PropertyAnimation_0_user_data = lv_mem_alloc(sizeof(ui_anim_user_data_t));
+    PropertyAnimation_0_user_data->target = TargetObject;
+    PropertyAnimation_0_user_data->val = -1;
+    lv_anim_t PropertyAnimation_0;
+    lv_anim_init(&PropertyAnimation_0);
+    lv_anim_set_time(&PropertyAnimation_0, 600);
+    lv_anim_set_user_data(&PropertyAnimation_0, PropertyAnimation_0_user_data);
+    lv_anim_set_custom_exec_cb(&PropertyAnimation_0, _ui_anim_callback_set_y);
+    lv_anim_set_values(&PropertyAnimation_0, 228, 250);
+    lv_anim_set_path_cb(&PropertyAnimation_0, lv_anim_path_linear);
+    lv_anim_set_delay(&PropertyAnimation_0, delay + 0);
+    lv_anim_set_deleted_cb(&PropertyAnimation_0, _ui_anim_callback_free_user_data);
+    lv_anim_set_playback_time(&PropertyAnimation_0, 0);
+    lv_anim_set_playback_delay(&PropertyAnimation_0, 0);
+    lv_anim_set_repeat_count(&PropertyAnimation_0, 0);
+    lv_anim_set_repeat_delay(&PropertyAnimation_0, 0);
+    lv_anim_set_early_apply(&PropertyAnimation_0, false);
+    lv_anim_start(&PropertyAnimation_0);
+
+}
+void InstructionsInit_Animation(lv_obj_t * TargetObject, int delay)
+{
+    ui_anim_user_data_t * PropertyAnimation_0_user_data = lv_mem_alloc(sizeof(ui_anim_user_data_t));
+    PropertyAnimation_0_user_data->target = TargetObject;
+    PropertyAnimation_0_user_data->val = -1;
+    lv_anim_t PropertyAnimation_0;
+    lv_anim_init(&PropertyAnimation_0);
+    lv_anim_set_time(&PropertyAnimation_0, 1000);
+    lv_anim_set_user_data(&PropertyAnimation_0, PropertyAnimation_0_user_data);
+    lv_anim_set_custom_exec_cb(&PropertyAnimation_0, _ui_anim_callback_set_y);
+    lv_anim_set_values(&PropertyAnimation_0, 250, 130);
+    lv_anim_set_path_cb(&PropertyAnimation_0, lv_anim_path_linear);
+    lv_anim_set_delay(&PropertyAnimation_0, delay + 0);
+    lv_anim_set_deleted_cb(&PropertyAnimation_0, _ui_anim_callback_free_user_data);
+    lv_anim_set_playback_time(&PropertyAnimation_0, 0);
+    lv_anim_set_playback_delay(&PropertyAnimation_0, 0);
+    lv_anim_set_repeat_count(&PropertyAnimation_0, 0);
+    lv_anim_set_repeat_delay(&PropertyAnimation_0, 0);
+    lv_anim_set_early_apply(&PropertyAnimation_0, false);
+    lv_anim_start(&PropertyAnimation_0);
+
+}
+void InstructionsReset_Animation(lv_obj_t * TargetObject, int delay)
+{
+    ui_anim_user_data_t * PropertyAnimation_0_user_data = lv_mem_alloc(sizeof(ui_anim_user_data_t));
+    PropertyAnimation_0_user_data->target = TargetObject;
+    PropertyAnimation_0_user_data->val = -1;
+    lv_anim_t PropertyAnimation_0;
+    lv_anim_init(&PropertyAnimation_0);
+    lv_anim_set_time(&PropertyAnimation_0, 1000);
+    lv_anim_set_user_data(&PropertyAnimation_0, PropertyAnimation_0_user_data);
+    lv_anim_set_custom_exec_cb(&PropertyAnimation_0, _ui_anim_callback_set_y);
+    lv_anim_set_values(&PropertyAnimation_0, 130, 250);
+    lv_anim_set_path_cb(&PropertyAnimation_0, lv_anim_path_linear);
+    lv_anim_set_delay(&PropertyAnimation_0, delay + 0);
+    lv_anim_set_deleted_cb(&PropertyAnimation_0, _ui_anim_callback_free_user_data);
+    lv_anim_set_playback_time(&PropertyAnimation_0, 0);
+    lv_anim_set_playback_delay(&PropertyAnimation_0, 0);
+    lv_anim_set_repeat_count(&PropertyAnimation_0, 0);
+    lv_anim_set_repeat_delay(&PropertyAnimation_0, 0);
+    lv_anim_set_early_apply(&PropertyAnimation_0, false);
+    lv_anim_start(&PropertyAnimation_0);
+
+}
+void TinyHouseIconReset_Animation(lv_obj_t * TargetObject, int delay)
+{
+    ui_anim_user_data_t * PropertyAnimation_0_user_data = lv_mem_alloc(sizeof(ui_anim_user_data_t));
+    PropertyAnimation_0_user_data->target = TargetObject;
+    PropertyAnimation_0_user_data->val = -1;
+    lv_anim_t PropertyAnimation_0;
+    lv_anim_init(&PropertyAnimation_0);
+    lv_anim_set_time(&PropertyAnimation_0, 1000);
+    lv_anim_set_user_data(&PropertyAnimation_0, PropertyAnimation_0_user_data);
+    lv_anim_set_custom_exec_cb(&PropertyAnimation_0, _ui_anim_callback_set_opacity);
+    lv_anim_set_values(&PropertyAnimation_0, 255, 0);
+    lv_anim_set_path_cb(&PropertyAnimation_0, lv_anim_path_linear);
+    lv_anim_set_delay(&PropertyAnimation_0, delay + 0);
+    lv_anim_set_deleted_cb(&PropertyAnimation_0, _ui_anim_callback_free_user_data);
+    lv_anim_set_playback_time(&PropertyAnimation_0, 0);
+    lv_anim_set_playback_delay(&PropertyAnimation_0, 0);
+    lv_anim_set_repeat_count(&PropertyAnimation_0, 0);
+    lv_anim_set_repeat_delay(&PropertyAnimation_0, 0);
+    lv_anim_set_early_apply(&PropertyAnimation_0, false);
+    lv_anim_start(&PropertyAnimation_0);
+
+}
+void KitchenIconPosition_Animation(lv_obj_t * TargetObject, int delay)
+{
+    ui_anim_user_data_t * PropertyAnimation_0_user_data = lv_mem_alloc(sizeof(ui_anim_user_data_t));
+    PropertyAnimation_0_user_data->target = TargetObject;
+    PropertyAnimation_0_user_data->val = -1;
+    lv_anim_t PropertyAnimation_0;
+    lv_anim_init(&PropertyAnimation_0);
+    lv_anim_set_time(&PropertyAnimation_0, 500);
+    lv_anim_set_user_data(&PropertyAnimation_0, PropertyAnimation_0_user_data);
+    lv_anim_set_custom_exec_cb(&PropertyAnimation_0, _ui_anim_callback_set_x);
+    lv_anim_set_values(&PropertyAnimation_0, -200, 132);
+    lv_anim_set_path_cb(&PropertyAnimation_0, lv_anim_path_linear);
+    lv_anim_set_delay(&PropertyAnimation_0, delay + 0);
+    lv_anim_set_deleted_cb(&PropertyAnimation_0, _ui_anim_callback_free_user_data);
+    lv_anim_set_playback_time(&PropertyAnimation_0, 0);
+    lv_anim_set_playback_delay(&PropertyAnimation_0, 0);
+    lv_anim_set_repeat_count(&PropertyAnimation_0, 0);
+    lv_anim_set_repeat_delay(&PropertyAnimation_0, 0);
+    lv_anim_set_early_apply(&PropertyAnimation_0, false);
+    lv_anim_start(&PropertyAnimation_0);
+    ui_anim_user_data_t * PropertyAnimation_1_user_data = lv_mem_alloc(sizeof(ui_anim_user_data_t));
+    PropertyAnimation_1_user_data->target = TargetObject;
+    PropertyAnimation_1_user_data->val = -1;
+    lv_anim_t PropertyAnimation_1;
+    lv_anim_init(&PropertyAnimation_1);
+    lv_anim_set_time(&PropertyAnimation_1, 500);
+    lv_anim_set_user_data(&PropertyAnimation_1, PropertyAnimation_1_user_data);
+    lv_anim_set_custom_exec_cb(&PropertyAnimation_1, _ui_anim_callback_set_y);
+    lv_anim_set_values(&PropertyAnimation_1, -100, -2);
+    lv_anim_set_path_cb(&PropertyAnimation_1, lv_anim_path_linear);
+    lv_anim_set_delay(&PropertyAnimation_1, delay + 0);
+    lv_anim_set_deleted_cb(&PropertyAnimation_1, _ui_anim_callback_free_user_data);
+    lv_anim_set_playback_time(&PropertyAnimation_1, 0);
+    lv_anim_set_playback_delay(&PropertyAnimation_1, 0);
+    lv_anim_set_repeat_count(&PropertyAnimation_1, 0);
+    lv_anim_set_repeat_delay(&PropertyAnimation_1, 0);
+    lv_anim_set_early_apply(&PropertyAnimation_1, false);
+    lv_anim_start(&PropertyAnimation_1);
+
+}
+void LivingRoomIconPosition_Animation(lv_obj_t * TargetObject, int delay)
+{
+    ui_anim_user_data_t * PropertyAnimation_0_user_data = lv_mem_alloc(sizeof(ui_anim_user_data_t));
+    PropertyAnimation_0_user_data->target = TargetObject;
+    PropertyAnimation_0_user_data->val = -1;
+    lv_anim_t PropertyAnimation_0;
+    lv_anim_init(&PropertyAnimation_0);
+    lv_anim_set_time(&PropertyAnimation_0, 500);
+    lv_anim_set_user_data(&PropertyAnimation_0, PropertyAnimation_0_user_data);
+    lv_anim_set_custom_exec_cb(&PropertyAnimation_0, _ui_anim_callback_set_x);
+    lv_anim_set_values(&PropertyAnimation_0, 0, 151);
+    lv_anim_set_path_cb(&PropertyAnimation_0, lv_anim_path_linear);
+    lv_anim_set_delay(&PropertyAnimation_0, delay + 0);
+    lv_anim_set_deleted_cb(&PropertyAnimation_0, _ui_anim_callback_free_user_data);
+    lv_anim_set_playback_time(&PropertyAnimation_0, 0);
+    lv_anim_set_playback_delay(&PropertyAnimation_0, 0);
+    lv_anim_set_repeat_count(&PropertyAnimation_0, 0);
+    lv_anim_set_repeat_delay(&PropertyAnimation_0, 0);
+    lv_anim_set_early_apply(&PropertyAnimation_0, false);
+    lv_anim_start(&PropertyAnimation_0);
+    ui_anim_user_data_t * PropertyAnimation_1_user_data = lv_mem_alloc(sizeof(ui_anim_user_data_t));
+    PropertyAnimation_1_user_data->target = TargetObject;
+    PropertyAnimation_1_user_data->val = -1;
+    lv_anim_t PropertyAnimation_1;
+    lv_anim_init(&PropertyAnimation_1);
+    lv_anim_set_time(&PropertyAnimation_1, 500);
+    lv_anim_set_user_data(&PropertyAnimation_1, PropertyAnimation_1_user_data);
+    lv_anim_set_custom_exec_cb(&PropertyAnimation_1, _ui_anim_callback_set_y);
+    lv_anim_set_values(&PropertyAnimation_1, -145, -2);
+    lv_anim_set_path_cb(&PropertyAnimation_1, lv_anim_path_linear);
+    lv_anim_set_delay(&PropertyAnimation_1, delay + 0);
+    lv_anim_set_deleted_cb(&PropertyAnimation_1, _ui_anim_callback_free_user_data);
+    lv_anim_set_playback_time(&PropertyAnimation_1, 0);
+    lv_anim_set_playback_delay(&PropertyAnimation_1, 0);
+    lv_anim_set_repeat_count(&PropertyAnimation_1, 0);
+    lv_anim_set_repeat_delay(&PropertyAnimation_1, 0);
+    lv_anim_set_early_apply(&PropertyAnimation_1, false);
+    lv_anim_start(&PropertyAnimation_1);
+
+}
+void MasterBedroomIconPosition_Animation(lv_obj_t * TargetObject, int delay)
+{
+    ui_anim_user_data_t * PropertyAnimation_0_user_data = lv_mem_alloc(sizeof(ui_anim_user_data_t));
+    PropertyAnimation_0_user_data->target = TargetObject;
+    PropertyAnimation_0_user_data->val = -1;
+    lv_anim_t PropertyAnimation_0;
+    lv_anim_init(&PropertyAnimation_0);
+    lv_anim_set_time(&PropertyAnimation_0, 500);
+    lv_anim_set_user_data(&PropertyAnimation_0, PropertyAnimation_0_user_data);
+    lv_anim_set_custom_exec_cb(&PropertyAnimation_0, _ui_anim_callback_set_x);
+    lv_anim_set_values(&PropertyAnimation_0, 200, 155);
+    lv_anim_set_path_cb(&PropertyAnimation_0, lv_anim_path_linear);
+    lv_anim_set_delay(&PropertyAnimation_0, delay + 0);
+    lv_anim_set_deleted_cb(&PropertyAnimation_0, _ui_anim_callback_free_user_data);
+    lv_anim_set_playback_time(&PropertyAnimation_0, 0);
+    lv_anim_set_playback_delay(&PropertyAnimation_0, 0);
+    lv_anim_set_repeat_count(&PropertyAnimation_0, 0);
+    lv_anim_set_repeat_delay(&PropertyAnimation_0, 0);
+    lv_anim_set_early_apply(&PropertyAnimation_0, false);
+    lv_anim_start(&PropertyAnimation_0);
+    ui_anim_user_data_t * PropertyAnimation_1_user_data = lv_mem_alloc(sizeof(ui_anim_user_data_t));
+    PropertyAnimation_1_user_data->target = TargetObject;
+    PropertyAnimation_1_user_data->val = -1;
+    lv_anim_t PropertyAnimation_1;
+    lv_anim_init(&PropertyAnimation_1);
+    lv_anim_set_time(&PropertyAnimation_1, 500);
+    lv_anim_set_user_data(&PropertyAnimation_1, PropertyAnimation_1_user_data);
+    lv_anim_set_custom_exec_cb(&PropertyAnimation_1, _ui_anim_callback_set_y);
+    lv_anim_set_values(&PropertyAnimation_1, -100, -4);
+    lv_anim_set_path_cb(&PropertyAnimation_1, lv_anim_path_linear);
+    lv_anim_set_delay(&PropertyAnimation_1, delay + 0);
+    lv_anim_set_deleted_cb(&PropertyAnimation_1, _ui_anim_callback_free_user_data);
+    lv_anim_set_playback_time(&PropertyAnimation_1, 0);
+    lv_anim_set_playback_delay(&PropertyAnimation_1, 0);
+    lv_anim_set_repeat_count(&PropertyAnimation_1, 0);
+    lv_anim_set_repeat_delay(&PropertyAnimation_1, 0);
+    lv_anim_set_early_apply(&PropertyAnimation_1, false);
+    lv_anim_start(&PropertyAnimation_1);
+
+}
+void BedroomIconPosition_Animation(lv_obj_t * TargetObject, int delay)
+{
+    ui_anim_user_data_t * PropertyAnimation_0_user_data = lv_mem_alloc(sizeof(ui_anim_user_data_t));
+    PropertyAnimation_0_user_data->target = TargetObject;
+    PropertyAnimation_0_user_data->val = -1;
+    lv_anim_t PropertyAnimation_0;
+    lv_anim_init(&PropertyAnimation_0);
+    lv_anim_set_time(&PropertyAnimation_0, 500);
+    lv_anim_set_user_data(&PropertyAnimation_0, PropertyAnimation_0_user_data);
+    lv_anim_set_custom_exec_cb(&PropertyAnimation_0, _ui_anim_callback_set_x);
+    lv_anim_set_values(&PropertyAnimation_0, -200, 152);
+    lv_anim_set_path_cb(&PropertyAnimation_0, lv_anim_path_linear);
+    lv_anim_set_delay(&PropertyAnimation_0, delay + 0);
+    lv_anim_set_deleted_cb(&PropertyAnimation_0, _ui_anim_callback_free_user_data);
+    lv_anim_set_playback_time(&PropertyAnimation_0, 0);
+    lv_anim_set_playback_delay(&PropertyAnimation_0, 0);
+    lv_anim_set_repeat_count(&PropertyAnimation_0, 0);
+    lv_anim_set_repeat_delay(&PropertyAnimation_0, 0);
+    lv_anim_set_early_apply(&PropertyAnimation_0, false);
+    lv_anim_start(&PropertyAnimation_0);
+    ui_anim_user_data_t * PropertyAnimation_1_user_data = lv_mem_alloc(sizeof(ui_anim_user_data_t));
+    PropertyAnimation_1_user_data->target = TargetObject;
+    PropertyAnimation_1_user_data->val = -1;
+    lv_anim_t PropertyAnimation_1;
+    lv_anim_init(&PropertyAnimation_1);
+    lv_anim_set_time(&PropertyAnimation_1, 500);
+    lv_anim_set_user_data(&PropertyAnimation_1, PropertyAnimation_1_user_data);
+    lv_anim_set_custom_exec_cb(&PropertyAnimation_1, _ui_anim_callback_set_y);
+    lv_anim_set_values(&PropertyAnimation_1, 100, -1);
+    lv_anim_set_path_cb(&PropertyAnimation_1, lv_anim_path_linear);
+    lv_anim_set_delay(&PropertyAnimation_1, delay + 0);
+    lv_anim_set_deleted_cb(&PropertyAnimation_1, _ui_anim_callback_free_user_data);
+    lv_anim_set_playback_time(&PropertyAnimation_1, 0);
+    lv_anim_set_playback_delay(&PropertyAnimation_1, 0);
+    lv_anim_set_repeat_count(&PropertyAnimation_1, 0);
+    lv_anim_set_repeat_delay(&PropertyAnimation_1, 0);
+    lv_anim_set_early_apply(&PropertyAnimation_1, false);
+    lv_anim_start(&PropertyAnimation_1);
+
+}
+void LaundryRoomIconPosition_Animation(lv_obj_t * TargetObject, int delay)
+{
+    ui_anim_user_data_t * PropertyAnimation_0_user_data = lv_mem_alloc(sizeof(ui_anim_user_data_t));
+    PropertyAnimation_0_user_data->target = TargetObject;
+    PropertyAnimation_0_user_data->val = -1;
+    lv_anim_t PropertyAnimation_0;
+    lv_anim_init(&PropertyAnimation_0);
+    lv_anim_set_time(&PropertyAnimation_0, 500);
+    lv_anim_set_user_data(&PropertyAnimation_0, PropertyAnimation_0_user_data);
+    lv_anim_set_custom_exec_cb(&PropertyAnimation_0, _ui_anim_callback_set_x);
+    lv_anim_set_values(&PropertyAnimation_0, 0, 162);
+    lv_anim_set_path_cb(&PropertyAnimation_0, lv_anim_path_linear);
+    lv_anim_set_delay(&PropertyAnimation_0, delay + 0);
+    lv_anim_set_deleted_cb(&PropertyAnimation_0, _ui_anim_callback_free_user_data);
+    lv_anim_set_playback_time(&PropertyAnimation_0, 0);
+    lv_anim_set_playback_delay(&PropertyAnimation_0, 0);
+    lv_anim_set_repeat_count(&PropertyAnimation_0, 0);
+    lv_anim_set_repeat_delay(&PropertyAnimation_0, 0);
+    lv_anim_set_early_apply(&PropertyAnimation_0, false);
+    lv_anim_start(&PropertyAnimation_0);
+    ui_anim_user_data_t * PropertyAnimation_1_user_data = lv_mem_alloc(sizeof(ui_anim_user_data_t));
+    PropertyAnimation_1_user_data->target = TargetObject;
+    PropertyAnimation_1_user_data->val = -1;
+    lv_anim_t PropertyAnimation_1;
+    lv_anim_init(&PropertyAnimation_1);
+    lv_anim_set_time(&PropertyAnimation_1, 500);
+    lv_anim_set_user_data(&PropertyAnimation_1, PropertyAnimation_1_user_data);
+    lv_anim_set_custom_exec_cb(&PropertyAnimation_1, _ui_anim_callback_set_y);
+    lv_anim_set_values(&PropertyAnimation_1, 145, -4);
+    lv_anim_set_path_cb(&PropertyAnimation_1, lv_anim_path_linear);
+    lv_anim_set_delay(&PropertyAnimation_1, delay + 0);
+    lv_anim_set_deleted_cb(&PropertyAnimation_1, _ui_anim_callback_free_user_data);
+    lv_anim_set_playback_time(&PropertyAnimation_1, 0);
+    lv_anim_set_playback_delay(&PropertyAnimation_1, 0);
+    lv_anim_set_repeat_count(&PropertyAnimation_1, 0);
+    lv_anim_set_repeat_delay(&PropertyAnimation_1, 0);
+    lv_anim_set_early_apply(&PropertyAnimation_1, false);
+    lv_anim_start(&PropertyAnimation_1);
+
+}
+void OfficeIconPosition_Animation(lv_obj_t * TargetObject, int delay)
+{
+    ui_anim_user_data_t * PropertyAnimation_0_user_data = lv_mem_alloc(sizeof(ui_anim_user_data_t));
+    PropertyAnimation_0_user_data->target = TargetObject;
+    PropertyAnimation_0_user_data->val = -1;
+    lv_anim_t PropertyAnimation_0;
+    lv_anim_init(&PropertyAnimation_0);
+    lv_anim_set_time(&PropertyAnimation_0, 500);
+    lv_anim_set_user_data(&PropertyAnimation_0, PropertyAnimation_0_user_data);
+    lv_anim_set_custom_exec_cb(&PropertyAnimation_0, _ui_anim_callback_set_x);
+    lv_anim_set_values(&PropertyAnimation_0, 200, 157);
+    lv_anim_set_path_cb(&PropertyAnimation_0, lv_anim_path_linear);
+    lv_anim_set_delay(&PropertyAnimation_0, delay + 0);
+    lv_anim_set_deleted_cb(&PropertyAnimation_0, _ui_anim_callback_free_user_data);
+    lv_anim_set_playback_time(&PropertyAnimation_0, 0);
+    lv_anim_set_playback_delay(&PropertyAnimation_0, 0);
+    lv_anim_set_repeat_count(&PropertyAnimation_0, 0);
+    lv_anim_set_repeat_delay(&PropertyAnimation_0, 0);
+    lv_anim_set_early_apply(&PropertyAnimation_0, false);
+    lv_anim_start(&PropertyAnimation_0);
+    ui_anim_user_data_t * PropertyAnimation_1_user_data = lv_mem_alloc(sizeof(ui_anim_user_data_t));
+    PropertyAnimation_1_user_data->target = TargetObject;
+    PropertyAnimation_1_user_data->val = -1;
+    lv_anim_t PropertyAnimation_1;
+    lv_anim_init(&PropertyAnimation_1);
+    lv_anim_set_time(&PropertyAnimation_1, 500);
+    lv_anim_set_user_data(&PropertyAnimation_1, PropertyAnimation_1_user_data);
+    lv_anim_set_custom_exec_cb(&PropertyAnimation_1, _ui_anim_callback_set_y);
+    lv_anim_set_values(&PropertyAnimation_1, 100, 1);
+    lv_anim_set_path_cb(&PropertyAnimation_1, lv_anim_path_linear);
+    lv_anim_set_delay(&PropertyAnimation_1, delay + 0);
+    lv_anim_set_deleted_cb(&PropertyAnimation_1, _ui_anim_callback_free_user_data);
+    lv_anim_set_playback_time(&PropertyAnimation_1, 0);
+    lv_anim_set_playback_delay(&PropertyAnimation_1, 0);
+    lv_anim_set_repeat_count(&PropertyAnimation_1, 0);
+    lv_anim_set_repeat_delay(&PropertyAnimation_1, 0);
+    lv_anim_set_early_apply(&PropertyAnimation_1, false);
+    lv_anim_start(&PropertyAnimation_1);
+
+}
+void KitchenLabelPosition_Animation(lv_obj_t * TargetObject, int delay)
+{
+    ui_anim_user_data_t * PropertyAnimation_0_user_data = lv_mem_alloc(sizeof(ui_anim_user_data_t));
+    PropertyAnimation_0_user_data->target = TargetObject;
+    PropertyAnimation_0_user_data->val = -1;
+    lv_anim_t PropertyAnimation_0;
+    lv_anim_init(&PropertyAnimation_0);
+    lv_anim_set_time(&PropertyAnimation_0, 500);
+    lv_anim_set_user_data(&PropertyAnimation_0, PropertyAnimation_0_user_data);
+    lv_anim_set_custom_exec_cb(&PropertyAnimation_0, _ui_anim_callback_set_x);
+    lv_anim_set_values(&PropertyAnimation_0, -253, -256);
+    lv_anim_set_path_cb(&PropertyAnimation_0, lv_anim_path_linear);
+    lv_anim_set_delay(&PropertyAnimation_0, delay + 0);
+    lv_anim_set_deleted_cb(&PropertyAnimation_0, _ui_anim_callback_free_user_data);
+    lv_anim_set_playback_time(&PropertyAnimation_0, 0);
+    lv_anim_set_playback_delay(&PropertyAnimation_0, 0);
+    lv_anim_set_repeat_count(&PropertyAnimation_0, 0);
+    lv_anim_set_repeat_delay(&PropertyAnimation_0, 0);
+    lv_anim_set_early_apply(&PropertyAnimation_0, false);
+    lv_anim_start(&PropertyAnimation_0);
+    ui_anim_user_data_t * PropertyAnimation_1_user_data = lv_mem_alloc(sizeof(ui_anim_user_data_t));
+    PropertyAnimation_1_user_data->target = TargetObject;
+    PropertyAnimation_1_user_data->val = -1;
+    lv_anim_t PropertyAnimation_1;
+    lv_anim_init(&PropertyAnimation_1);
+    lv_anim_set_time(&PropertyAnimation_1, 500);
+    lv_anim_set_user_data(&PropertyAnimation_1, PropertyAnimation_1_user_data);
+    lv_anim_set_custom_exec_cb(&PropertyAnimation_1, _ui_anim_callback_set_y);
+    lv_anim_set_values(&PropertyAnimation_1, -15, -180);
+    lv_anim_set_path_cb(&PropertyAnimation_1, lv_anim_path_linear);
+    lv_anim_set_delay(&PropertyAnimation_1, delay + 0);
+    lv_anim_set_deleted_cb(&PropertyAnimation_1, _ui_anim_callback_free_user_data);
+    lv_anim_set_playback_time(&PropertyAnimation_1, 0);
+    lv_anim_set_playback_delay(&PropertyAnimation_1, 0);
+    lv_anim_set_repeat_count(&PropertyAnimation_1, 0);
+    lv_anim_set_repeat_delay(&PropertyAnimation_1, 0);
+    lv_anim_set_early_apply(&PropertyAnimation_1, false);
+    lv_anim_start(&PropertyAnimation_1);
+
+}
+void LivinrRoomLabelPosition_Animation(lv_obj_t * TargetObject, int delay)
+{
+    ui_anim_user_data_t * PropertyAnimation_0_user_data = lv_mem_alloc(sizeof(ui_anim_user_data_t));
+    PropertyAnimation_0_user_data->target = TargetObject;
+    PropertyAnimation_0_user_data->val = -1;
+    lv_anim_t PropertyAnimation_0;
+    lv_anim_init(&PropertyAnimation_0);
+    lv_anim_set_time(&PropertyAnimation_0, 500);
+    lv_anim_set_user_data(&PropertyAnimation_0, PropertyAnimation_0_user_data);
+    lv_anim_set_custom_exec_cb(&PropertyAnimation_0, _ui_anim_callback_set_x);
+    lv_anim_set_values(&PropertyAnimation_0, 80, -200);
+    lv_anim_set_path_cb(&PropertyAnimation_0, lv_anim_path_linear);
+    lv_anim_set_delay(&PropertyAnimation_0, delay + 0);
+    lv_anim_set_deleted_cb(&PropertyAnimation_0, _ui_anim_callback_free_user_data);
+    lv_anim_set_playback_time(&PropertyAnimation_0, 0);
+    lv_anim_set_playback_delay(&PropertyAnimation_0, 0);
+    lv_anim_set_repeat_count(&PropertyAnimation_0, 0);
+    lv_anim_set_repeat_delay(&PropertyAnimation_0, 0);
+    lv_anim_set_early_apply(&PropertyAnimation_0, false);
+    lv_anim_start(&PropertyAnimation_0);
+    ui_anim_user_data_t * PropertyAnimation_1_user_data = lv_mem_alloc(sizeof(ui_anim_user_data_t));
+    PropertyAnimation_1_user_data->target = TargetObject;
+    PropertyAnimation_1_user_data->val = -1;
+    lv_anim_t PropertyAnimation_1;
+    lv_anim_init(&PropertyAnimation_1);
+    lv_anim_set_time(&PropertyAnimation_1, 500);
+    lv_anim_set_user_data(&PropertyAnimation_1, PropertyAnimation_1_user_data);
+    lv_anim_set_custom_exec_cb(&PropertyAnimation_1, _ui_anim_callback_set_y);
+    lv_anim_set_values(&PropertyAnimation_1, -227, -180);
+    lv_anim_set_path_cb(&PropertyAnimation_1, lv_anim_path_linear);
+    lv_anim_set_delay(&PropertyAnimation_1, delay + 0);
+    lv_anim_set_deleted_cb(&PropertyAnimation_1, _ui_anim_callback_free_user_data);
+    lv_anim_set_playback_time(&PropertyAnimation_1, 0);
+    lv_anim_set_playback_delay(&PropertyAnimation_1, 0);
+    lv_anim_set_repeat_count(&PropertyAnimation_1, 0);
+    lv_anim_set_repeat_delay(&PropertyAnimation_1, 0);
+    lv_anim_set_early_apply(&PropertyAnimation_1, false);
+    lv_anim_start(&PropertyAnimation_1);
+
+}
+void MasterBoedroomLabelPosition_Animation(lv_obj_t * TargetObject, int delay)
+{
+    ui_anim_user_data_t * PropertyAnimation_0_user_data = lv_mem_alloc(sizeof(ui_anim_user_data_t));
+    PropertyAnimation_0_user_data->target = TargetObject;
+    PropertyAnimation_0_user_data->val = -1;
+    lv_anim_t PropertyAnimation_0;
+    lv_anim_init(&PropertyAnimation_0);
+    lv_anim_set_time(&PropertyAnimation_0, 500);
+    lv_anim_set_user_data(&PropertyAnimation_0, PropertyAnimation_0_user_data);
+    lv_anim_set_custom_exec_cb(&PropertyAnimation_0, _ui_anim_callback_set_x);
+    lv_anim_set_values(&PropertyAnimation_0, 281, -220);
+    lv_anim_set_path_cb(&PropertyAnimation_0, lv_anim_path_linear);
+    lv_anim_set_delay(&PropertyAnimation_0, delay + 0);
+    lv_anim_set_deleted_cb(&PropertyAnimation_0, _ui_anim_callback_free_user_data);
+    lv_anim_set_playback_time(&PropertyAnimation_0, 0);
+    lv_anim_set_playback_delay(&PropertyAnimation_0, 0);
+    lv_anim_set_repeat_count(&PropertyAnimation_0, 0);
+    lv_anim_set_repeat_delay(&PropertyAnimation_0, 0);
+    lv_anim_set_early_apply(&PropertyAnimation_0, false);
+    lv_anim_start(&PropertyAnimation_0);
+    ui_anim_user_data_t * PropertyAnimation_1_user_data = lv_mem_alloc(sizeof(ui_anim_user_data_t));
+    PropertyAnimation_1_user_data->target = TargetObject;
+    PropertyAnimation_1_user_data->val = -1;
+    lv_anim_t PropertyAnimation_1;
+    lv_anim_init(&PropertyAnimation_1);
+    lv_anim_set_time(&PropertyAnimation_1, 500);
+    lv_anim_set_user_data(&PropertyAnimation_1, PropertyAnimation_1_user_data);
+    lv_anim_set_custom_exec_cb(&PropertyAnimation_1, _ui_anim_callback_set_y);
+    lv_anim_set_values(&PropertyAnimation_1, -10, -180);
+    lv_anim_set_path_cb(&PropertyAnimation_1, lv_anim_path_linear);
+    lv_anim_set_delay(&PropertyAnimation_1, delay + 0);
+    lv_anim_set_deleted_cb(&PropertyAnimation_1, _ui_anim_callback_free_user_data);
+    lv_anim_set_playback_time(&PropertyAnimation_1, 0);
+    lv_anim_set_playback_delay(&PropertyAnimation_1, 0);
+    lv_anim_set_repeat_count(&PropertyAnimation_1, 0);
+    lv_anim_set_repeat_delay(&PropertyAnimation_1, 0);
+    lv_anim_set_early_apply(&PropertyAnimation_1, false);
+    lv_anim_start(&PropertyAnimation_1);
+
+}
+void LaundryRoomLabelPosition_Animation(lv_obj_t * TargetObject, int delay)
+{
+    ui_anim_user_data_t * PropertyAnimation_0_user_data = lv_mem_alloc(sizeof(ui_anim_user_data_t));
+    PropertyAnimation_0_user_data->target = TargetObject;
+    PropertyAnimation_0_user_data->val = -1;
+    lv_anim_t PropertyAnimation_0;
+    lv_anim_init(&PropertyAnimation_0);
+    lv_anim_set_time(&PropertyAnimation_0, 500);
+    lv_anim_set_user_data(&PropertyAnimation_0, PropertyAnimation_0_user_data);
+    lv_anim_set_custom_exec_cb(&PropertyAnimation_0, _ui_anim_callback_set_x);
+    lv_anim_set_values(&PropertyAnimation_0, -100, -230);
+    lv_anim_set_path_cb(&PropertyAnimation_0, lv_anim_path_linear);
+    lv_anim_set_delay(&PropertyAnimation_0, delay + 0);
+    lv_anim_set_deleted_cb(&PropertyAnimation_0, _ui_anim_callback_free_user_data);
+    lv_anim_set_playback_time(&PropertyAnimation_0, 0);
+    lv_anim_set_playback_delay(&PropertyAnimation_0, 0);
+    lv_anim_set_repeat_count(&PropertyAnimation_0, 0);
+    lv_anim_set_repeat_delay(&PropertyAnimation_0, 0);
+    lv_anim_set_early_apply(&PropertyAnimation_0, false);
+    lv_anim_start(&PropertyAnimation_0);
+    ui_anim_user_data_t * PropertyAnimation_1_user_data = lv_mem_alloc(sizeof(ui_anim_user_data_t));
+    PropertyAnimation_1_user_data->target = TargetObject;
+    PropertyAnimation_1_user_data->val = -1;
+    lv_anim_t PropertyAnimation_1;
+    lv_anim_init(&PropertyAnimation_1);
+    lv_anim_set_time(&PropertyAnimation_1, 500);
+    lv_anim_set_user_data(&PropertyAnimation_1, PropertyAnimation_1_user_data);
+    lv_anim_set_custom_exec_cb(&PropertyAnimation_1, _ui_anim_callback_set_y);
+    lv_anim_set_values(&PropertyAnimation_1, 229, -180);
+    lv_anim_set_path_cb(&PropertyAnimation_1, lv_anim_path_linear);
+    lv_anim_set_delay(&PropertyAnimation_1, delay + 0);
+    lv_anim_set_deleted_cb(&PropertyAnimation_1, _ui_anim_callback_free_user_data);
+    lv_anim_set_playback_time(&PropertyAnimation_1, 0);
+    lv_anim_set_playback_delay(&PropertyAnimation_1, 0);
+    lv_anim_set_repeat_count(&PropertyAnimation_1, 0);
+    lv_anim_set_repeat_delay(&PropertyAnimation_1, 0);
+    lv_anim_set_early_apply(&PropertyAnimation_1, false);
+    lv_anim_start(&PropertyAnimation_1);
+
+}
+void OfficeLabelPosition_Animation(lv_obj_t * TargetObject, int delay)
+{
+    ui_anim_user_data_t * PropertyAnimation_0_user_data = lv_mem_alloc(sizeof(ui_anim_user_data_t));
+    PropertyAnimation_0_user_data->target = TargetObject;
+    PropertyAnimation_0_user_data->val = -1;
+    lv_anim_t PropertyAnimation_0;
+    lv_anim_init(&PropertyAnimation_0);
+    lv_anim_set_time(&PropertyAnimation_0, 500);
+    lv_anim_set_user_data(&PropertyAnimation_0, PropertyAnimation_0_user_data);
+    lv_anim_set_custom_exec_cb(&PropertyAnimation_0, _ui_anim_callback_set_x);
+    lv_anim_set_values(&PropertyAnimation_0, 249, -260);
+    lv_anim_set_path_cb(&PropertyAnimation_0, lv_anim_path_linear);
+    lv_anim_set_delay(&PropertyAnimation_0, delay + 0);
+    lv_anim_set_deleted_cb(&PropertyAnimation_0, _ui_anim_callback_free_user_data);
+    lv_anim_set_playback_time(&PropertyAnimation_0, 0);
+    lv_anim_set_playback_delay(&PropertyAnimation_0, 0);
+    lv_anim_set_repeat_count(&PropertyAnimation_0, 0);
+    lv_anim_set_repeat_delay(&PropertyAnimation_0, 0);
+    lv_anim_set_early_apply(&PropertyAnimation_0, false);
+    lv_anim_start(&PropertyAnimation_0);
+    ui_anim_user_data_t * PropertyAnimation_1_user_data = lv_mem_alloc(sizeof(ui_anim_user_data_t));
+    PropertyAnimation_1_user_data->target = TargetObject;
+    PropertyAnimation_1_user_data->val = -1;
+    lv_anim_t PropertyAnimation_1;
+    lv_anim_init(&PropertyAnimation_1);
+    lv_anim_set_time(&PropertyAnimation_1, 500);
+    lv_anim_set_user_data(&PropertyAnimation_1, PropertyAnimation_1_user_data);
+    lv_anim_set_custom_exec_cb(&PropertyAnimation_1, _ui_anim_callback_set_y);
+    lv_anim_set_values(&PropertyAnimation_1, 192, -180);
+    lv_anim_set_path_cb(&PropertyAnimation_1, lv_anim_path_linear);
+    lv_anim_set_delay(&PropertyAnimation_1, delay + 0);
+    lv_anim_set_deleted_cb(&PropertyAnimation_1, _ui_anim_callback_free_user_data);
+    lv_anim_set_playback_time(&PropertyAnimation_1, 0);
+    lv_anim_set_playback_delay(&PropertyAnimation_1, 0);
+    lv_anim_set_repeat_count(&PropertyAnimation_1, 0);
+    lv_anim_set_repeat_delay(&PropertyAnimation_1, 0);
+    lv_anim_set_early_apply(&PropertyAnimation_1, false);
+    lv_anim_start(&PropertyAnimation_1);
+
+}
+void BedroomLabelPosition_Animation(lv_obj_t * TargetObject, int delay)
+{
+    ui_anim_user_data_t * PropertyAnimation_0_user_data = lv_mem_alloc(sizeof(ui_anim_user_data_t));
+    PropertyAnimation_0_user_data->target = TargetObject;
+    PropertyAnimation_0_user_data->val = -1;
+    lv_anim_t PropertyAnimation_0;
+    lv_anim_init(&PropertyAnimation_0);
+    lv_anim_set_time(&PropertyAnimation_0, 500);
+    lv_anim_set_user_data(&PropertyAnimation_0, PropertyAnimation_0_user_data);
+    lv_anim_set_custom_exec_cb(&PropertyAnimation_0, _ui_anim_callback_set_x);
+    lv_anim_set_values(&PropertyAnimation_0, -256, -250);
+    lv_anim_set_path_cb(&PropertyAnimation_0, lv_anim_path_linear);
+    lv_anim_set_delay(&PropertyAnimation_0, delay + 0);
+    lv_anim_set_deleted_cb(&PropertyAnimation_0, _ui_anim_callback_free_user_data);
+    lv_anim_set_playback_time(&PropertyAnimation_0, 0);
+    lv_anim_set_playback_delay(&PropertyAnimation_0, 0);
+    lv_anim_set_repeat_count(&PropertyAnimation_0, 0);
+    lv_anim_set_repeat_delay(&PropertyAnimation_0, 0);
+    lv_anim_set_early_apply(&PropertyAnimation_0, false);
+    lv_anim_start(&PropertyAnimation_0);
+    ui_anim_user_data_t * PropertyAnimation_1_user_data = lv_mem_alloc(sizeof(ui_anim_user_data_t));
+    PropertyAnimation_1_user_data->target = TargetObject;
+    PropertyAnimation_1_user_data->val = -1;
+    lv_anim_t PropertyAnimation_1;
+    lv_anim_init(&PropertyAnimation_1);
+    lv_anim_set_time(&PropertyAnimation_1, 500);
+    lv_anim_set_user_data(&PropertyAnimation_1, PropertyAnimation_1_user_data);
+    lv_anim_set_custom_exec_cb(&PropertyAnimation_1, _ui_anim_callback_set_y);
+    lv_anim_set_values(&PropertyAnimation_1, 188, -180);
+    lv_anim_set_path_cb(&PropertyAnimation_1, lv_anim_path_linear);
+    lv_anim_set_delay(&PropertyAnimation_1, delay + 0);
+    lv_anim_set_deleted_cb(&PropertyAnimation_1, _ui_anim_callback_free_user_data);
+    lv_anim_set_playback_time(&PropertyAnimation_1, 0);
+    lv_anim_set_playback_delay(&PropertyAnimation_1, 0);
+    lv_anim_set_repeat_count(&PropertyAnimation_1, 0);
+    lv_anim_set_repeat_delay(&PropertyAnimation_1, 0);
+    lv_anim_set_early_apply(&PropertyAnimation_1, false);
+    lv_anim_start(&PropertyAnimation_1);
+
+}
+void SettingsSaved_Animation(lv_obj_t * TargetObject, int delay)
+{
+    ui_anim_user_data_t * PropertyAnimation_0_user_data = lv_mem_alloc(sizeof(ui_anim_user_data_t));
+    PropertyAnimation_0_user_data->target = TargetObject;
+    PropertyAnimation_0_user_data->val = -1;
+    lv_anim_t PropertyAnimation_0;
+    lv_anim_init(&PropertyAnimation_0);
+    lv_anim_set_time(&PropertyAnimation_0, 1000);
+    lv_anim_set_user_data(&PropertyAnimation_0, PropertyAnimation_0_user_data);
+    lv_anim_set_custom_exec_cb(&PropertyAnimation_0, _ui_anim_callback_set_opacity);
+    lv_anim_set_values(&PropertyAnimation_0, 0, 255);
+    lv_anim_set_path_cb(&PropertyAnimation_0, lv_anim_path_linear);
+    lv_anim_set_delay(&PropertyAnimation_0, delay + 0);
+    lv_anim_set_deleted_cb(&PropertyAnimation_0, _ui_anim_callback_free_user_data);
+    lv_anim_set_playback_time(&PropertyAnimation_0, 0);
+    lv_anim_set_playback_delay(&PropertyAnimation_0, 0);
+    lv_anim_set_repeat_count(&PropertyAnimation_0, 0);
+    lv_anim_set_repeat_delay(&PropertyAnimation_0, 0);
+    lv_anim_set_early_apply(&PropertyAnimation_0, false);
+    lv_anim_start(&PropertyAnimation_0);
+
+}
 
 ///////////////////// FUNCTIONS ////////////////////
+void ui_event_Home(lv_event_t * e)
+{
+    lv_event_code_t event_code = lv_event_get_code(e);
+    lv_obj_t * target = lv_event_get_target(e);
+    if(event_code == LV_EVENT_SCREEN_LOADED) {
+        TitleInit_Animation(ui_Title, 0);
+        SubTitleInit_Animation(ui_SubTitle, 0);
+        AuthorInit_Animation(ui_Author, 0);
+        InstructionsInit_Animation(ui_InstructionsLabel, 0);
+    }
+    if(event_code == LV_EVENT_SCREEN_UNLOAD_START) {
+        TitleReset_Animation(ui_Title, 0);
+        SubTitleReset_Animation(ui_SubTitle, 0);
+        AuthorReset_Animation(ui_Author, 0);
+        InstructionsReset_Animation(ui_InstructionsLabel, 0);
+    }
+}
+void ui_event_House(lv_event_t * e)
+{
+    lv_event_code_t event_code = lv_event_get_code(e);
+    lv_obj_t * target = lv_event_get_target(e);
+    if(event_code == LV_EVENT_RELEASED) {
+        _ui_screen_change(&ui_RoomsView, LV_SCR_LOAD_ANIM_FADE_ON, 500, 0, &ui_RoomsView_screen_init);
+    }
+}
+void ui_event_Panel2(lv_event_t * e)
+{
+    lv_event_code_t event_code = lv_event_get_code(e);
+    lv_obj_t * target = lv_event_get_target(e);
+    if(event_code == LV_EVENT_RELEASED) {
+        _ui_screen_change(&ui_Settings, LV_SCR_LOAD_ANIM_MOVE_BOTTOM, 500, 0, &ui_Settings_screen_init);
+    }
+}
+void ui_event_RoomsView(lv_event_t * e)
+{
+    lv_event_code_t event_code = lv_event_get_code(e);
+    lv_obj_t * target = lv_event_get_target(e);
+    if(event_code == LV_EVENT_SCREEN_LOADED) {
+        KitchenIconInit_Animation(ui_KitchenIcon, 500);
+        LivingRoomIconInit_Animation(ui_LivingRoomIcon, 550);
+        MasterBedroomIconInit_Animation(ui_MasterBedroomIcon, 600);
+        BedRoomIconInit_Animation(ui_BedRoomIcon, 650);
+        LaundryRoomIconInit_Animation(ui_LaundryRoomIcon, 700);
+        OfficeIconInit_Animation(ui_OfficeIcon, 750);
+        TinyHouseIconInit_Animation(ui_HouseIcon, 0);
+        RoomLabelInit_Animation(ui_KitchenLabel, 800);
+        RoomLabelInit_Animation(ui_LivingroomLabel, 850);
+        RoomLabelInit_Animation(ui_MasterBedroomLabel, 900);
+        RoomLabelInit_Animation(ui_BedroomLabel, 950);
+        RoomLabelInit_Animation(ui_LaundryRoomLabel, 1000);
+        RoomLabelInit_Animation(ui_OfficeLabel, 1050);
+    }
+    if(event_code == LV_EVENT_SCREEN_LOAD_START) {
+        _ui_opacity_set(ui_KitchenIcon, 0);
+        _ui_opacity_set(ui_KitchenLabel, 0);
+        _ui_opacity_set(ui_LivingRoomIcon, 0);
+        _ui_opacity_set(ui_LivingroomLabel, 0);
+        _ui_opacity_set(ui_MasterBedroomIcon, 0);
+        _ui_opacity_set(ui_MasterBedroomLabel, 0);
+        _ui_opacity_set(ui_BedRoomIcon, 0);
+        _ui_opacity_set(ui_BedroomLabel, 0);
+        _ui_opacity_set(ui_LaundryRoomIcon, 0);
+        _ui_opacity_set(ui_LaundryRoomLabel, 0);
+        _ui_opacity_set(ui_OfficeIcon, 0);
+        _ui_opacity_set(ui_OfficeLabel, 0);
+        _ui_basic_set_property(ui_KitchenIcon, _UI_BASIC_PROPERTY_POSITION_Y,  0);
+        _ui_basic_set_property(ui_KitchenIcon, _UI_BASIC_PROPERTY_POSITION_X,  0);
+        _ui_basic_set_property(ui_KitchenLabel, _UI_BASIC_PROPERTY_POSITION_Y,  -15);
+        _ui_basic_set_property(ui_KitchenLabel, _UI_BASIC_PROPERTY_POSITION_X,  -253);
+        _ui_basic_set_property(ui_LivingRoomIcon, _UI_BASIC_PROPERTY_POSITION_Y,  0);
+        _ui_basic_set_property(ui_LivingRoomIcon, _UI_BASIC_PROPERTY_POSITION_X,  0);
+        _ui_basic_set_property(ui_LivingroomLabel, _UI_BASIC_PROPERTY_POSITION_Y,  -227);
+        _ui_basic_set_property(ui_LivingroomLabel, _UI_BASIC_PROPERTY_POSITION_X,  80);
+        _ui_basic_set_property(ui_MasterBedroomIcon, _UI_BASIC_PROPERTY_POSITION_Y,  0);
+        _ui_basic_set_property(ui_MasterBedroomIcon, _UI_BASIC_PROPERTY_POSITION_X,  0);
+        _ui_basic_set_property(ui_MasterBedroomLabel, _UI_BASIC_PROPERTY_POSITION_Y,  -10);
+        _ui_basic_set_property(ui_MasterBedroomLabel, _UI_BASIC_PROPERTY_POSITION_X,  281);
+        _ui_basic_set_property(ui_BedRoomIcon, _UI_BASIC_PROPERTY_POSITION_Y,  0);
+        _ui_basic_set_property(ui_BedRoomIcon, _UI_BASIC_PROPERTY_POSITION_X,  0);
+        _ui_basic_set_property(ui_BedroomLabel, _UI_BASIC_PROPERTY_POSITION_Y,  188);
+        _ui_basic_set_property(ui_BedroomLabel, _UI_BASIC_PROPERTY_POSITION_X,  -256);
+        _ui_basic_set_property(ui_LaundryRoomIcon, _UI_BASIC_PROPERTY_POSITION_Y,  0);
+        _ui_basic_set_property(ui_LaundryRoomIcon, _UI_BASIC_PROPERTY_POSITION_X,  0);
+        _ui_basic_set_property(ui_LaundryRoomLabel, _UI_BASIC_PROPERTY_POSITION_Y,  229);
+        _ui_basic_set_property(ui_LaundryRoomLabel, _UI_BASIC_PROPERTY_POSITION_X,  -100);
+        _ui_basic_set_property(ui_OfficeIcon, _UI_BASIC_PROPERTY_POSITION_Y,  0);
+        _ui_basic_set_property(ui_OfficeIcon, _UI_BASIC_PROPERTY_POSITION_X,  0);
+        _ui_basic_set_property(ui_OfficeLabel, _UI_BASIC_PROPERTY_POSITION_Y,  192);
+        _ui_basic_set_property(ui_OfficeLabel, _UI_BASIC_PROPERTY_POSITION_X,  249);
+    }
+}
+void ui_event_KitchenIcon(lv_event_t * e)
+{
+    lv_event_code_t event_code = lv_event_get_code(e);
+    lv_obj_t * target = lv_event_get_target(e);
+    if(event_code == LV_EVENT_RELEASED) {
+        _ui_screen_change(&ui_KitchenView, LV_SCR_LOAD_ANIM_FADE_ON, 500, 500, &ui_KitchenView_screen_init);
+        TinyHouseIconReset_Animation(ui_HouseIcon, 0);
+        KitchenIconPosition_Animation(ui_KitchenIcon, 0);
+        KitchenLabelPosition_Animation(ui_KitchenLabel, 0);
+        LivingRoomIconReset_Animation(ui_LivingRoomIcon, 0);
+        MasterBedRoomIconReset_Animation(ui_MasterBedroomIcon, 0);
+        BedRoomIconReset_Animation(ui_BedRoomIcon, 0);
+        LaundryRoomIconReset_Animation(ui_LaundryRoomIcon, 0);
+        OfficeIconReset_Animation(ui_OfficeIcon, 0);
+        _ui_opacity_set(ui_LivingroomLabel, 0);
+        _ui_opacity_set(ui_MasterBedroomLabel, 0);
+        _ui_opacity_set(ui_BedroomLabel, 0);
+        _ui_opacity_set(ui_LaundryRoomLabel, 0);
+        _ui_opacity_set(ui_OfficeLabel, 0);
+    }
+}
+void ui_event_LivingRoomIcon(lv_event_t * e)
+{
+    lv_event_code_t event_code = lv_event_get_code(e);
+    lv_obj_t * target = lv_event_get_target(e);
+    if(event_code == LV_EVENT_RELEASED) {
+        _ui_screen_change(&ui_LivingRoomView, LV_SCR_LOAD_ANIM_FADE_ON, 500, 500, &ui_LivingRoomView_screen_init);
+        TinyHouseIconReset_Animation(ui_HouseIcon, 0);
+        LivingRoomIconPosition_Animation(ui_LivingRoomIcon, 0);
+        LivinrRoomLabelPosition_Animation(ui_LivingroomLabel, 0);
+        KitchenIconReset_Animation(ui_KitchenIcon, 0);
+        MasterBedRoomIconReset_Animation(ui_MasterBedroomIcon, 0);
+        BedRoomIconReset_Animation(ui_BedRoomIcon, 0);
+        LaundryRoomIconReset_Animation(ui_LaundryRoomIcon, 0);
+        OfficeIconReset_Animation(ui_OfficeIcon, 0);
+        _ui_opacity_set(ui_KitchenLabel, 0);
+        _ui_opacity_set(ui_MasterBedroomLabel, 0);
+        _ui_opacity_set(ui_BedroomLabel, 0);
+        _ui_opacity_set(ui_LaundryRoomLabel, 0);
+        _ui_opacity_set(ui_OfficeLabel, 0);
+    }
+}
+void ui_event_MasterBedroomIcon(lv_event_t * e)
+{
+    lv_event_code_t event_code = lv_event_get_code(e);
+    lv_obj_t * target = lv_event_get_target(e);
+    if(event_code == LV_EVENT_RELEASED) {
+        _ui_screen_change(&ui_MasterBedroomView, LV_SCR_LOAD_ANIM_FADE_ON, 500, 500, &ui_MasterBedroomView_screen_init);
+        TinyHouseIconReset_Animation(ui_HouseIcon, 0);
+        MasterBedroomIconPosition_Animation(ui_MasterBedroomIcon, 0);
+        MasterBoedroomLabelPosition_Animation(ui_MasterBedroomLabel, 0);
+        KitchenIconReset_Animation(ui_KitchenIcon, 0);
+        LivingRoomIconReset_Animation(ui_LivingRoomIcon, 0);
+        BedRoomIconReset_Animation(ui_BedRoomIcon, 0);
+        LivingRoomIconReset_Animation(ui_LaundryRoomIcon, 0);
+        OfficeIconReset_Animation(ui_OfficeIcon, 0);
+        _ui_opacity_set(ui_KitchenLabel, 0);
+        _ui_opacity_set(ui_LivingroomLabel, 0);
+        _ui_opacity_set(ui_BedroomLabel, 0);
+        _ui_opacity_set(ui_LaundryRoomLabel, 0);
+        _ui_opacity_set(ui_OfficeLabel, 0);
+    }
+}
+void ui_event_LaundryRoomIcon(lv_event_t * e)
+{
+    lv_event_code_t event_code = lv_event_get_code(e);
+    lv_obj_t * target = lv_event_get_target(e);
+    if(event_code == LV_EVENT_RELEASED) {
+        _ui_screen_change(&ui_LaundryRoomView, LV_SCR_LOAD_ANIM_FADE_ON, 500, 500, &ui_LaundryRoomView_screen_init);
+        TinyHouseIconReset_Animation(ui_HouseIcon, 0);
+        LaundryRoomIconPosition_Animation(ui_LaundryRoomIcon, 0);
+        LaundryRoomLabelPosition_Animation(ui_LaundryRoomLabel, 0);
+        KitchenIconReset_Animation(ui_KitchenIcon, 0);
+        LivingRoomIconReset_Animation(ui_LivingRoomIcon, 0);
+        MasterBedRoomIconReset_Animation(ui_MasterBedroomIcon, 0);
+        BedRoomIconReset_Animation(ui_BedRoomIcon, 0);
+        OfficeIconReset_Animation(ui_OfficeIcon, 0);
+        _ui_opacity_set(ui_KitchenLabel, 0);
+        _ui_opacity_set(ui_LivingroomLabel, 0);
+        _ui_opacity_set(ui_MasterBedroomLabel, 0);
+        _ui_opacity_set(ui_BedroomLabel, 0);
+        _ui_opacity_set(ui_OfficeLabel, 0);
+    }
+}
+void ui_event_BedRoomIcon(lv_event_t * e)
+{
+    lv_event_code_t event_code = lv_event_get_code(e);
+    lv_obj_t * target = lv_event_get_target(e);
+    if(event_code == LV_EVENT_RELEASED) {
+        _ui_screen_change(&ui_BedroomView, LV_SCR_LOAD_ANIM_FADE_ON, 500, 500, &ui_BedroomView_screen_init);
+        TinyHouseIconReset_Animation(ui_HouseIcon, 0);
+        BedroomIconPosition_Animation(ui_BedRoomIcon, 0);
+        BedroomLabelPosition_Animation(ui_BedroomLabel, 0);
+        KitchenIconReset_Animation(ui_KitchenIcon, 0);
+        LivingRoomIconReset_Animation(ui_LivingRoomIcon, 0);
+        MasterBedRoomIconReset_Animation(ui_MasterBedroomIcon, 0);
+        LaundryRoomIconReset_Animation(ui_LaundryRoomIcon, 0);
+        OfficeIconReset_Animation(ui_OfficeIcon, 0);
+        _ui_opacity_set(ui_KitchenLabel, 0);
+        _ui_opacity_set(ui_LivingroomLabel, 0);
+        _ui_opacity_set(ui_MasterBedroomLabel, 0);
+        _ui_opacity_set(ui_LaundryRoomLabel, 0);
+        _ui_opacity_set(ui_OfficeLabel, 0);
+    }
+}
+void ui_event_OfficeIcon(lv_event_t * e)
+{
+    lv_event_code_t event_code = lv_event_get_code(e);
+    lv_obj_t * target = lv_event_get_target(e);
+    if(event_code == LV_EVENT_RELEASED) {
+        _ui_screen_change(&ui_OfficeView, LV_SCR_LOAD_ANIM_FADE_ON, 500, 500, &ui_OfficeView_screen_init);
+        TinyHouseIconReset_Animation(ui_HouseIcon, 0);
+        OfficeIconPosition_Animation(ui_OfficeIcon, 0);
+        OfficeLabelPosition_Animation(ui_OfficeLabel, 0);
+        KitchenIconReset_Animation(ui_KitchenIcon, 0);
+        LivingRoomIconReset_Animation(ui_LivingRoomIcon, 0);
+        MasterBedRoomIconReset_Animation(ui_MasterBedroomIcon, 0);
+        BedRoomIconReset_Animation(ui_BedRoomIcon, 0);
+        LaundryRoomIconReset_Animation(ui_LaundryRoomIcon, 0);
+        _ui_opacity_set(ui_KitchenLabel, 0);
+        _ui_opacity_set(ui_LivingroomLabel, 0);
+        _ui_opacity_set(ui_MasterBedroomLabel, 0);
+        _ui_opacity_set(ui_BedroomLabel, 0);
+        _ui_opacity_set(ui_LaundryRoomLabel, 0);
+    }
+}
+void ui_event_HouseIcon(lv_event_t * e)
+{
+    lv_event_code_t event_code = lv_event_get_code(e);
+    lv_obj_t * target = lv_event_get_target(e);
+    if(event_code == LV_EVENT_RELEASED) {
+        _ui_screen_change(&ui_Home, LV_SCR_LOAD_ANIM_FADE_ON, 500, 500, &ui_Home_screen_init);
+        KitchenIconReset_Animation(ui_KitchenIcon, 0);
+        LivingRoomIconReset_Animation(ui_LivingRoomIcon, 0);
+        MasterBedRoomIconReset_Animation(ui_MasterBedroomIcon, 0);
+        BedRoomIconReset_Animation(ui_BedRoomIcon, 0);
+        LaundryRoomIconReset_Animation(ui_LaundryRoomIcon, 0);
+        OfficeIconReset_Animation(ui_OfficeIcon, 0);
+        _ui_opacity_set(ui_KitchenLabel, 0);
+        _ui_opacity_set(ui_LivingroomLabel, 0);
+        _ui_opacity_set(ui_MasterBedroomLabel, 0);
+        _ui_opacity_set(ui_BedroomLabel, 0);
+        _ui_opacity_set(ui_LaundryRoomLabel, 0);
+        _ui_opacity_set(ui_OfficeLabel, 0);
+        TinyHouseIconReset_Animation(ui_HouseIcon, 0);
+    }
+}
+void ui_event_KitchenView(lv_event_t * e)
+{
+    lv_event_code_t event_code = lv_event_get_code(e);
+    lv_obj_t * target = lv_event_get_target(e);
+    if(event_code == LV_EVENT_GESTURE &&  lv_indev_get_gesture_dir(lv_indev_get_act()) == LV_DIR_RIGHT) {
+        lv_indev_wait_release(lv_indev_get_act());
+        _ui_screen_change(&ui_RoomsView, LV_SCR_LOAD_ANIM_MOVE_RIGHT, 500, 0, &ui_RoomsView_screen_init);
+    }
+}
+void ui_event_Kitchen(lv_event_t * e)
+{
+    lv_event_code_t event_code = lv_event_get_code(e);
+    lv_obj_t * target = lv_event_get_target(e);
+    if(event_code == LV_EVENT_RELEASED) {
+        _ui_screen_change(&ui_RoomsView, LV_SCR_LOAD_ANIM_FADE_ON, 500, 0, &ui_RoomsView_screen_init);
+    }
+}
+void ui_event_LivingRoomView(lv_event_t * e)
+{
+    lv_event_code_t event_code = lv_event_get_code(e);
+    lv_obj_t * target = lv_event_get_target(e);
+    if(event_code == LV_EVENT_GESTURE &&  lv_indev_get_gesture_dir(lv_indev_get_act()) == LV_DIR_RIGHT) {
+        lv_indev_wait_release(lv_indev_get_act());
+        _ui_screen_change(&ui_RoomsView, LV_SCR_LOAD_ANIM_MOVE_RIGHT, 500, 0, &ui_RoomsView_screen_init);
+    }
+}
+void ui_event_Livingroom(lv_event_t * e)
+{
+    lv_event_code_t event_code = lv_event_get_code(e);
+    lv_obj_t * target = lv_event_get_target(e);
+    if(event_code == LV_EVENT_RELEASED) {
+        _ui_screen_change(&ui_RoomsView, LV_SCR_LOAD_ANIM_FADE_ON, 500, 0, &ui_RoomsView_screen_init);
+    }
+}
+void ui_event_MasterBedroomView(lv_event_t * e)
+{
+    lv_event_code_t event_code = lv_event_get_code(e);
+    lv_obj_t * target = lv_event_get_target(e);
+    if(event_code == LV_EVENT_GESTURE &&  lv_indev_get_gesture_dir(lv_indev_get_act()) == LV_DIR_RIGHT) {
+        lv_indev_wait_release(lv_indev_get_act());
+        _ui_screen_change(&ui_RoomsView, LV_SCR_LOAD_ANIM_MOVE_RIGHT, 500, 0, &ui_RoomsView_screen_init);
+    }
+}
+void ui_event_MasterBedroom(lv_event_t * e)
+{
+    lv_event_code_t event_code = lv_event_get_code(e);
+    lv_obj_t * target = lv_event_get_target(e);
+    if(event_code == LV_EVENT_RELEASED) {
+        _ui_screen_change(&ui_RoomsView, LV_SCR_LOAD_ANIM_FADE_ON, 500, 0, &ui_RoomsView_screen_init);
+    }
+}
+void ui_event_BedroomView(lv_event_t * e)
+{
+    lv_event_code_t event_code = lv_event_get_code(e);
+    lv_obj_t * target = lv_event_get_target(e);
+    if(event_code == LV_EVENT_GESTURE &&  lv_indev_get_gesture_dir(lv_indev_get_act()) == LV_DIR_RIGHT) {
+        lv_indev_wait_release(lv_indev_get_act());
+        _ui_screen_change(&ui_RoomsView, LV_SCR_LOAD_ANIM_MOVE_RIGHT, 500, 0, &ui_RoomsView_screen_init);
+    }
+}
+void ui_event_Bedroom(lv_event_t * e)
+{
+    lv_event_code_t event_code = lv_event_get_code(e);
+    lv_obj_t * target = lv_event_get_target(e);
+    if(event_code == LV_EVENT_RELEASED) {
+        _ui_screen_change(&ui_RoomsView, LV_SCR_LOAD_ANIM_FADE_ON, 500, 0, &ui_RoomsView_screen_init);
+    }
+}
+void ui_event_LaundryRoomView(lv_event_t * e)
+{
+    lv_event_code_t event_code = lv_event_get_code(e);
+    lv_obj_t * target = lv_event_get_target(e);
+    if(event_code == LV_EVENT_GESTURE &&  lv_indev_get_gesture_dir(lv_indev_get_act()) == LV_DIR_RIGHT) {
+        lv_indev_wait_release(lv_indev_get_act());
+        _ui_screen_change(&ui_RoomsView, LV_SCR_LOAD_ANIM_MOVE_RIGHT, 500, 0, &ui_RoomsView_screen_init);
+    }
+}
+void ui_event_LaundryRoom(lv_event_t * e)
+{
+    lv_event_code_t event_code = lv_event_get_code(e);
+    lv_obj_t * target = lv_event_get_target(e);
+    if(event_code == LV_EVENT_RELEASED) {
+        _ui_screen_change(&ui_RoomsView, LV_SCR_LOAD_ANIM_FADE_ON, 500, 0, &ui_RoomsView_screen_init);
+    }
+}
+void ui_event_OfficeView(lv_event_t * e)
+{
+    lv_event_code_t event_code = lv_event_get_code(e);
+    lv_obj_t * target = lv_event_get_target(e);
+    if(event_code == LV_EVENT_GESTURE &&  lv_indev_get_gesture_dir(lv_indev_get_act()) == LV_DIR_RIGHT) {
+        lv_indev_wait_release(lv_indev_get_act());
+        _ui_screen_change(&ui_RoomsView, LV_SCR_LOAD_ANIM_MOVE_RIGHT, 500, 0, &ui_RoomsView_screen_init);
+    }
+}
+void ui_event_Office(lv_event_t * e)
+{
+    lv_event_code_t event_code = lv_event_get_code(e);
+    lv_obj_t * target = lv_event_get_target(e);
+    if(event_code == LV_EVENT_RELEASED) {
+        _ui_screen_change(&ui_RoomsView, LV_SCR_LOAD_ANIM_FADE_ON, 500, 0, &ui_RoomsView_screen_init);
+    }
+}
+void ui_event_Settings(lv_event_t * e)
+{
+    lv_event_code_t event_code = lv_event_get_code(e);
+    lv_obj_t * target = lv_event_get_target(e);
+    if(event_code == LV_EVENT_SCREEN_LOAD_START) {
+        _ui_opacity_set(ui_SettingsSavedLabel, 0);
+    }
+}
+void ui_event_CancelButton(lv_event_t * e)
+{
+    lv_event_code_t event_code = lv_event_get_code(e);
+    lv_obj_t * target = lv_event_get_target(e);
+    if(event_code == LV_EVENT_RELEASED) {
+        _ui_screen_change(&ui_Home, LV_SCR_LOAD_ANIM_MOVE_TOP, 500, 0, &ui_Home_screen_init);
+        cancel_settings_change(e);
+    }
+}
+void ui_event_SaveButton(lv_event_t * e)
+{
+    lv_event_code_t event_code = lv_event_get_code(e);
+    lv_obj_t * target = lv_event_get_target(e);
+    if(event_code == LV_EVENT_RELEASED) {
+        _ui_screen_change(&ui_Home, LV_SCR_LOAD_ANIM_MOVE_TOP, 600, 1200, &ui_Home_screen_init);
+        save_settings(e);
+        SettingsSaved_Animation(ui_SettingsSavedLabel, 0);
+    }
+}
 
 ///////////////////// SCREENS ////////////////////
 
@@ -35,6 +1970,14 @@ void ui_init(void)
                                                true, LV_FONT_DEFAULT);
     lv_disp_set_theme(dispp, theme);
     ui_Home_screen_init();
+    ui_RoomsView_screen_init();
+    ui_KitchenView_screen_init();
+    ui_LivingRoomView_screen_init();
+    ui_MasterBedroomView_screen_init();
+    ui_BedroomView_screen_init();
+    ui_LaundryRoomView_screen_init();
+    ui_OfficeView_screen_init();
+    ui_Settings_screen_init();
     ui____initial_actions0 = lv_obj_create(NULL);
     lv_disp_load_scr(ui_Home);
 }
