@@ -37,7 +37,7 @@ void ui_LivingRoomView_screen_init(void)
     lv_obj_set_x(ui_LivingroomTempVal, -360);
     lv_obj_set_y(ui_LivingroomTempVal, -80);
     lv_obj_set_align(ui_LivingroomTempVal, LV_ALIGN_CENTER);
-    lv_label_set_text(ui_LivingroomTempVal, "80");
+    lv_label_set_text(ui_LivingroomTempVal, "0");
     lv_obj_set_style_text_font(ui_LivingroomTempVal, &ui_font_SubTitle, LV_PART_MAIN | LV_STATE_DEFAULT);
 
     ui_LivingroomTempLabel = lv_label_create(ui_LivingRoomView);
@@ -60,8 +60,6 @@ void ui_LivingRoomView_screen_init(void)
 
     ui_LivingroomTempGradient = lv_bar_create(ui_LivingRoomView);
     lv_bar_set_range(ui_LivingroomTempGradient, -10, 110);
-    lv_bar_set_value(ui_LivingroomTempGradient, 80, LV_ANIM_OFF);
-    lv_bar_set_start_value(ui_LivingroomTempGradient, 0, LV_ANIM_OFF);
     lv_obj_set_width(ui_LivingroomTempGradient, 199);
     lv_obj_set_height(ui_LivingroomTempGradient, 14);
     lv_obj_set_x(ui_LivingroomTempGradient, -222);
@@ -83,7 +81,7 @@ void ui_LivingRoomView_screen_init(void)
     lv_obj_set_x(ui_LivingroomHumidityVal, -360);
     lv_obj_set_y(ui_LivingroomHumidityVal, -20);
     lv_obj_set_align(ui_LivingroomHumidityVal, LV_ALIGN_CENTER);
-    lv_label_set_text(ui_LivingroomHumidityVal, "50");
+    lv_label_set_text(ui_LivingroomHumidityVal, "0");
     lv_obj_set_style_text_font(ui_LivingroomHumidityVal, &ui_font_SubTitle, LV_PART_MAIN | LV_STATE_DEFAULT);
 
     ui_LivingroomHumidityLabel = lv_label_create(ui_LivingRoomView);
@@ -97,8 +95,6 @@ void ui_LivingRoomView_screen_init(void)
 
     ui_LivingroomHumidityGradient = lv_bar_create(ui_LivingRoomView);
     lv_bar_set_range(ui_LivingroomHumidityGradient, -10, 110);
-    lv_bar_set_value(ui_LivingroomHumidityGradient, 50, LV_ANIM_OFF);
-    lv_bar_set_start_value(ui_LivingroomHumidityGradient, 0, LV_ANIM_OFF);
     lv_obj_set_width(ui_LivingroomHumidityGradient, 199);
     lv_obj_set_height(ui_LivingroomHumidityGradient, 14);
     lv_obj_set_x(ui_LivingroomHumidityGradient, -222);

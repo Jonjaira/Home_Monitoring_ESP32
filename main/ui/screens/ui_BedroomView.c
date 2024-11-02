@@ -37,7 +37,7 @@ void ui_BedroomView_screen_init(void)
     lv_obj_set_x(ui_BedroomTempVal, -360);
     lv_obj_set_y(ui_BedroomTempVal, -80);
     lv_obj_set_align(ui_BedroomTempVal, LV_ALIGN_CENTER);
-    lv_label_set_text(ui_BedroomTempVal, "80");
+    lv_label_set_text(ui_BedroomTempVal, "0");
     lv_obj_set_style_text_font(ui_BedroomTempVal, &ui_font_SubTitle, LV_PART_MAIN | LV_STATE_DEFAULT);
 
     ui_BedroomTempLabel = lv_label_create(ui_BedroomView);
@@ -60,8 +60,6 @@ void ui_BedroomView_screen_init(void)
 
     ui_BedroomTempGradient = lv_bar_create(ui_BedroomView);
     lv_bar_set_range(ui_BedroomTempGradient, -10, 110);
-    lv_bar_set_value(ui_BedroomTempGradient, 80, LV_ANIM_OFF);
-    lv_bar_set_start_value(ui_BedroomTempGradient, 0, LV_ANIM_OFF);
     lv_obj_set_width(ui_BedroomTempGradient, 199);
     lv_obj_set_height(ui_BedroomTempGradient, 14);
     lv_obj_set_x(ui_BedroomTempGradient, -222);
@@ -83,7 +81,7 @@ void ui_BedroomView_screen_init(void)
     lv_obj_set_x(ui_BedroomHumidityVal, -360);
     lv_obj_set_y(ui_BedroomHumidityVal, -20);
     lv_obj_set_align(ui_BedroomHumidityVal, LV_ALIGN_CENTER);
-    lv_label_set_text(ui_BedroomHumidityVal, "50");
+    lv_label_set_text(ui_BedroomHumidityVal, "0");
     lv_obj_set_style_text_font(ui_BedroomHumidityVal, &ui_font_SubTitle, LV_PART_MAIN | LV_STATE_DEFAULT);
 
     ui_BedroomHumidityLabel = lv_label_create(ui_BedroomView);
@@ -97,8 +95,6 @@ void ui_BedroomView_screen_init(void)
 
     ui_BedroomHumidityGradient = lv_bar_create(ui_BedroomView);
     lv_bar_set_range(ui_BedroomHumidityGradient, -10, 110);
-    lv_bar_set_value(ui_BedroomHumidityGradient, 50, LV_ANIM_OFF);
-    lv_bar_set_start_value(ui_BedroomHumidityGradient, 0, LV_ANIM_OFF);
     lv_obj_set_width(ui_BedroomHumidityGradient, 199);
     lv_obj_set_height(ui_BedroomHumidityGradient, 14);
     lv_obj_set_x(ui_BedroomHumidityGradient, -222);

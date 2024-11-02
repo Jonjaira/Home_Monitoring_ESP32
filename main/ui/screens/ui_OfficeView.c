@@ -37,7 +37,7 @@ void ui_OfficeView_screen_init(void)
     lv_obj_set_x(ui_OfficeTempVal, -360);
     lv_obj_set_y(ui_OfficeTempVal, -80);
     lv_obj_set_align(ui_OfficeTempVal, LV_ALIGN_CENTER);
-    lv_label_set_text(ui_OfficeTempVal, "80");
+    lv_label_set_text(ui_OfficeTempVal, "0");
     lv_obj_set_style_text_font(ui_OfficeTempVal, &ui_font_SubTitle, LV_PART_MAIN | LV_STATE_DEFAULT);
 
     ui_OfficeTempLabel = lv_label_create(ui_OfficeView);
@@ -60,8 +60,6 @@ void ui_OfficeView_screen_init(void)
 
     ui_OfficeTempGradient = lv_bar_create(ui_OfficeView);
     lv_bar_set_range(ui_OfficeTempGradient, -10, 110);
-    lv_bar_set_value(ui_OfficeTempGradient, 80, LV_ANIM_OFF);
-    lv_bar_set_start_value(ui_OfficeTempGradient, 0, LV_ANIM_OFF);
     lv_obj_set_width(ui_OfficeTempGradient, 199);
     lv_obj_set_height(ui_OfficeTempGradient, 14);
     lv_obj_set_x(ui_OfficeTempGradient, -222);
@@ -83,7 +81,7 @@ void ui_OfficeView_screen_init(void)
     lv_obj_set_x(ui_OfficeHumidityVal, -360);
     lv_obj_set_y(ui_OfficeHumidityVal, -20);
     lv_obj_set_align(ui_OfficeHumidityVal, LV_ALIGN_CENTER);
-    lv_label_set_text(ui_OfficeHumidityVal, "50");
+    lv_label_set_text(ui_OfficeHumidityVal, "0");
     lv_obj_set_style_text_font(ui_OfficeHumidityVal, &ui_font_SubTitle, LV_PART_MAIN | LV_STATE_DEFAULT);
 
     ui_OfficeHumidityLabel = lv_label_create(ui_OfficeView);
@@ -97,8 +95,6 @@ void ui_OfficeView_screen_init(void)
 
     ui_OfficeHumidityGradient = lv_bar_create(ui_OfficeView);
     lv_bar_set_range(ui_OfficeHumidityGradient, -10, 110);
-    lv_bar_set_value(ui_OfficeHumidityGradient, 50, LV_ANIM_OFF);
-    lv_bar_set_start_value(ui_OfficeHumidityGradient, 0, LV_ANIM_OFF);
     lv_obj_set_width(ui_OfficeHumidityGradient, 199);
     lv_obj_set_height(ui_OfficeHumidityGradient, 14);
     lv_obj_set_x(ui_OfficeHumidityGradient, -222);

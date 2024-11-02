@@ -33,8 +33,6 @@ void ui_KitchenView_screen_init(void)
 
     ui_KitchenTempGradient = lv_bar_create(ui_KitchenView);
     lv_bar_set_range(ui_KitchenTempGradient, -10, 110);
-    lv_bar_set_value(ui_KitchenTempGradient, 80, LV_ANIM_OFF);
-    lv_bar_set_start_value(ui_KitchenTempGradient, 0, LV_ANIM_OFF);
     lv_obj_set_width(ui_KitchenTempGradient, 199);
     lv_obj_set_height(ui_KitchenTempGradient, 14);
     lv_obj_set_x(ui_KitchenTempGradient, -222);
@@ -65,7 +63,7 @@ void ui_KitchenView_screen_init(void)
     lv_obj_set_x(ui_KitchenTempVal, -360);
     lv_obj_set_y(ui_KitchenTempVal, -80);
     lv_obj_set_align(ui_KitchenTempVal, LV_ALIGN_CENTER);
-    lv_label_set_text(ui_KitchenTempVal, "80");
+    lv_label_set_text(ui_KitchenTempVal, "0");
     lv_obj_set_style_text_font(ui_KitchenTempVal, &ui_font_SubTitle, LV_PART_MAIN | LV_STATE_DEFAULT);
 
     ui_KitchenTempUnits = lv_label_create(ui_KitchenView);
@@ -83,13 +81,11 @@ void ui_KitchenView_screen_init(void)
     lv_obj_set_x(ui_KitchenHumidityVal, -360);
     lv_obj_set_y(ui_KitchenHumidityVal, -20);
     lv_obj_set_align(ui_KitchenHumidityVal, LV_ALIGN_CENTER);
-    lv_label_set_text(ui_KitchenHumidityVal, "50");
+    lv_label_set_text(ui_KitchenHumidityVal, "0");
     lv_obj_set_style_text_font(ui_KitchenHumidityVal, &ui_font_SubTitle, LV_PART_MAIN | LV_STATE_DEFAULT);
 
     ui_KitchenHumidityGradient = lv_bar_create(ui_KitchenView);
     lv_bar_set_range(ui_KitchenHumidityGradient, -10, 110);
-    lv_bar_set_value(ui_KitchenHumidityGradient, 50, LV_ANIM_OFF);
-    lv_bar_set_start_value(ui_KitchenHumidityGradient, 0, LV_ANIM_OFF);
     lv_obj_set_width(ui_KitchenHumidityGradient, 199);
     lv_obj_set_height(ui_KitchenHumidityGradient, 14);
     lv_obj_set_x(ui_KitchenHumidityGradient, -222);

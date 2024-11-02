@@ -37,7 +37,7 @@ void ui_LaundryRoomView_screen_init(void)
     lv_obj_set_x(ui_LaundryRoomTempVal, -360);
     lv_obj_set_y(ui_LaundryRoomTempVal, -80);
     lv_obj_set_align(ui_LaundryRoomTempVal, LV_ALIGN_CENTER);
-    lv_label_set_text(ui_LaundryRoomTempVal, "80");
+    lv_label_set_text(ui_LaundryRoomTempVal, "0");
     lv_obj_set_style_text_font(ui_LaundryRoomTempVal, &ui_font_SubTitle, LV_PART_MAIN | LV_STATE_DEFAULT);
 
     ui_LaundryRoomTempLabel = lv_label_create(ui_LaundryRoomView);
@@ -60,8 +60,6 @@ void ui_LaundryRoomView_screen_init(void)
 
     ui_LaundryRoomTempGradient = lv_bar_create(ui_LaundryRoomView);
     lv_bar_set_range(ui_LaundryRoomTempGradient, -10, 110);
-    lv_bar_set_value(ui_LaundryRoomTempGradient, 80, LV_ANIM_OFF);
-    lv_bar_set_start_value(ui_LaundryRoomTempGradient, 0, LV_ANIM_OFF);
     lv_obj_set_width(ui_LaundryRoomTempGradient, 199);
     lv_obj_set_height(ui_LaundryRoomTempGradient, 14);
     lv_obj_set_x(ui_LaundryRoomTempGradient, -222);
@@ -83,7 +81,7 @@ void ui_LaundryRoomView_screen_init(void)
     lv_obj_set_x(ui_LaundryRoomHumidityVal, -360);
     lv_obj_set_y(ui_LaundryRoomHumidityVal, -20);
     lv_obj_set_align(ui_LaundryRoomHumidityVal, LV_ALIGN_CENTER);
-    lv_label_set_text(ui_LaundryRoomHumidityVal, "50");
+    lv_label_set_text(ui_LaundryRoomHumidityVal, "0");
     lv_obj_set_style_text_font(ui_LaundryRoomHumidityVal, &ui_font_SubTitle, LV_PART_MAIN | LV_STATE_DEFAULT);
 
     ui_LaundryRoomHumidityLabel = lv_label_create(ui_LaundryRoomView);
@@ -97,8 +95,6 @@ void ui_LaundryRoomView_screen_init(void)
 
     ui_LaundryRoomHumidityGradient = lv_bar_create(ui_LaundryRoomView);
     lv_bar_set_range(ui_LaundryRoomHumidityGradient, -10, 110);
-    lv_bar_set_value(ui_LaundryRoomHumidityGradient, 50, LV_ANIM_OFF);
-    lv_bar_set_start_value(ui_LaundryRoomHumidityGradient, 0, LV_ANIM_OFF);
     lv_obj_set_width(ui_LaundryRoomHumidityGradient, 199);
     lv_obj_set_height(ui_LaundryRoomHumidityGradient, 14);
     lv_obj_set_x(ui_LaundryRoomHumidityGradient, -222);

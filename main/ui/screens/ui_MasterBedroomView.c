@@ -37,7 +37,7 @@ void ui_MasterBedroomView_screen_init(void)
     lv_obj_set_x(ui_MasterBedroomTempVal, -360);
     lv_obj_set_y(ui_MasterBedroomTempVal, -80);
     lv_obj_set_align(ui_MasterBedroomTempVal, LV_ALIGN_CENTER);
-    lv_label_set_text(ui_MasterBedroomTempVal, "80");
+    lv_label_set_text(ui_MasterBedroomTempVal, "0");
     lv_obj_set_style_text_font(ui_MasterBedroomTempVal, &ui_font_SubTitle, LV_PART_MAIN | LV_STATE_DEFAULT);
 
     ui_MasterBedroomTempLabel = lv_label_create(ui_MasterBedroomView);
@@ -60,8 +60,6 @@ void ui_MasterBedroomView_screen_init(void)
 
     ui_MasterBedroomTempGradient = lv_bar_create(ui_MasterBedroomView);
     lv_bar_set_range(ui_MasterBedroomTempGradient, -10, 110);
-    lv_bar_set_value(ui_MasterBedroomTempGradient, 80, LV_ANIM_OFF);
-    lv_bar_set_start_value(ui_MasterBedroomTempGradient, 0, LV_ANIM_OFF);
     lv_obj_set_width(ui_MasterBedroomTempGradient, 199);
     lv_obj_set_height(ui_MasterBedroomTempGradient, 14);
     lv_obj_set_x(ui_MasterBedroomTempGradient, -222);
@@ -83,7 +81,7 @@ void ui_MasterBedroomView_screen_init(void)
     lv_obj_set_x(ui_MasterBedroomHumidityVal, -359);
     lv_obj_set_y(ui_MasterBedroomHumidityVal, -20);
     lv_obj_set_align(ui_MasterBedroomHumidityVal, LV_ALIGN_CENTER);
-    lv_label_set_text(ui_MasterBedroomHumidityVal, "50");
+    lv_label_set_text(ui_MasterBedroomHumidityVal, "0");
     lv_obj_set_style_text_font(ui_MasterBedroomHumidityVal, &ui_font_SubTitle, LV_PART_MAIN | LV_STATE_DEFAULT);
 
     ui_MasterBedroomHumidityLabel = lv_label_create(ui_MasterBedroomView);
@@ -97,8 +95,6 @@ void ui_MasterBedroomView_screen_init(void)
 
     ui_MasterBedroomHumidityGradient = lv_bar_create(ui_MasterBedroomView);
     lv_bar_set_range(ui_MasterBedroomHumidityGradient, -10, 110);
-    lv_bar_set_value(ui_MasterBedroomHumidityGradient, 50, LV_ANIM_OFF);
-    lv_bar_set_start_value(ui_MasterBedroomHumidityGradient, 0, LV_ANIM_OFF);
     lv_obj_set_width(ui_MasterBedroomHumidityGradient, 199);
     lv_obj_set_height(ui_MasterBedroomHumidityGradient, 14);
     lv_obj_set_x(ui_MasterBedroomHumidityGradient, -222);

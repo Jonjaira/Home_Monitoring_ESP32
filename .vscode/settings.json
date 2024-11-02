@@ -1,7 +1,7 @@
 {
   "C_Cpp.intelliSenseEngine": "default",
   "idf.adapterTargetName": "esp32s3",
-  "idf.port": "/dev/ttyACM0",
+  "idf.port": "/dev/ttyACM1",
   "idf.flashBaudRate": "2000000",
   "idf.openOcdConfigs": [
     "board/esp32s3-builtin.cfg"
