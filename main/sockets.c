@@ -20,31 +20,37 @@ extern lv_obj_t * ui_KitchenTempVal;
 extern lv_obj_t * ui_KitchenHumidityVal;
 extern lv_obj_t * ui_KitchenTempGradient;
 extern lv_obj_t * ui_KitchenHumidityGradient;
+extern lv_obj_t * ui_KitchenPresenceIndicator;
 
 extern lv_obj_t * ui_LivingroomTempVal;
 extern lv_obj_t * ui_LivingroomHumidityVal;
-extern lv_obj_t * ui_LaundryRoomTempGradient;
-extern lv_obj_t * ui_LaundryRoomHumidityGradient;
+extern lv_obj_t * ui_LivingroomTempGradient;
+extern lv_obj_t * ui_LivingroomHumidityGradient;
+extern lv_obj_t * ui_LivingRoomPresenceIndicator;
 
 extern lv_obj_t * ui_MasterBedroomTempVal;
 extern lv_obj_t * ui_MasterBedroomHumidityVal;
 extern lv_obj_t * ui_MasterBedroomTempGradient;
 extern lv_obj_t * ui_MasterBedroomHumidityGradient;
+extern lv_obj_t * ui_MasterBedroomPresenceIndicator;
 
 extern lv_obj_t * ui_BedroomTempVal;
 extern lv_obj_t * ui_BedroomHumidityVal;
 extern lv_obj_t * ui_BedroomTempGradient;
 extern lv_obj_t * ui_BedroomHumidityGradient;
+extern lv_obj_t * ui_BedroomPresenceIndicator;
 
 extern lv_obj_t * ui_LaundryRoomTempVal;
 extern lv_obj_t * ui_LaundryRoomHumidityVal;
 extern lv_obj_t * ui_LaundryRoomTempGradient;
 extern lv_obj_t * ui_LaundryRoomHumidityGradient;
+extern lv_obj_t * ui_LaundryRoomPresenceIndicator;
 
 extern lv_obj_t * ui_OfficeTempVal;
 extern lv_obj_t * ui_OfficeHumidityVal;
 extern lv_obj_t * ui_OfficeTempGradient;
 extern lv_obj_t * ui_OfficeHumidityGradient;
+extern lv_obj_t * ui_OfficePresenceIndicator;
 
 #define PORT                        3333
 #define MAX_CLIENTS                 5
@@ -53,37 +59,65 @@ static const char *TAG = "example";
 const char *rooms[] = {"Kitchen", "LivingRoom", "MainBedroom", "BedRoom", "Laundry", "Office"};
 
 // Function to update labels based on room data
-void update_label(const char *room, char *temp_str, int32_t temp, const char *humidity_str, int32_t humidity) {
+void update_label(const char *room, char *temp_str, int32_t temp, char *humidity_str, int32_t humidity, int occupancy) {
+    lv_obj_t *temp_label = NULL;
+    lv_obj_t *humidity_label = NULL;
+    lv_obj_t *temp_gradient = NULL;
+    lv_obj_t *humidity_gradient = NULL;
+    lv_obj_t *presence_indicator = NULL;
+
     if (strcmp(room, "Kitchen") == 0) {
-        lv_label_set_text(ui_KitchenTempVal, temp_str);
-        lv_label_set_text(ui_KitchenHumidityVal, humidity_str);
-        lv_bar_set_value(ui_KitchenTempGradient, temp, LV_ANIM_OFF);
-        lv_bar_set_value(ui_KitchenHumidityGradient, humidity, LV_ANIM_OFF);
+        temp_label = ui_KitchenTempVal;
+        humidity_label = ui_KitchenHumidityVal;
+        temp_gradient = ui_KitchenTempGradient;
+        humidity_gradient = ui_KitchenHumidityGradient;
+        presence_indicator = ui_KitchenPresenceIndicator;
     } else if (strcmp(room, "LivingRoom") == 0) {
-        lv_label_set_text(ui_LivingroomTempVal, temp_str);
-        lv_label_set_text(ui_LivingroomHumidityVal, humidity_str);
-        lv_bar_set_value(ui_LaundryRoomTempGradient, temp, LV_ANIM_OFF);
-        lv_bar_set_value(ui_LaundryRoomHumidityGradient, humidity, LV_ANIM_OFF);
+        temp_label = ui_LivingroomTempVal;
+        humidity_label = ui_LivingroomHumidityVal;
+        temp_gradient = ui_LivingroomTempGradient;
+        humidity_gradient = ui_LivingroomHumidityGradient;
+        presence_indicator = ui_LivingRoomPresenceIndicator;
     } else if (strcmp(room, "MainBedroom") == 0) {
-        lv_label_set_text(ui_MasterBedroomTempVal, temp_str);
-        lv_label_set_text(ui_MasterBedroomHumidityVal, humidity_str);
-        lv_bar_set_value(ui_MasterBedroomTempGradient, temp, LV_ANIM_OFF);
-        lv_bar_set_value(ui_MasterBedroomHumidityGradient, humidity, LV_ANIM_OFF);
+        temp_label = ui_MasterBedroomTempVal;
+        humidity_label = ui_MasterBedroomHumidityVal;
+        temp_gradient = ui_MasterBedroomTempGradient;
+        humidity_gradient = ui_MasterBedroomHumidityGradient;
+        presence_indicator = ui_MasterBedroomPresenceIndicator;
     } else if (strcmp(room, "BedRoom") == 0) {
-        lv_label_set_text(ui_BedroomTempVal, temp_str);
-        lv_label_set_text(ui_BedroomHumidityVal, humidity_str);
-        lv_bar_set_value(ui_BedroomTempGradient, temp, LV_ANIM_OFF);
-        lv_bar_set_value(ui_BedroomHumidityGradient, humidity, LV_ANIM_OFF);
+        temp_label = ui_BedroomTempVal;
+        humidity_label = ui_BedroomHumidityVal;
+        temp_gradient = ui_BedroomTempGradient;
+        humidity_gradient = ui_BedroomHumidityGradient;
+        presence_indicator = ui_BedroomPresenceIndicator;
     } else if (strcmp(room, "Laundry") == 0) {
-        lv_label_set_text(ui_LaundryRoomTempVal, temp_str);
-        lv_label_set_text(ui_LaundryRoomHumidityVal, humidity_str);
-        lv_bar_set_value(ui_LaundryRoomTempGradient, temp, LV_ANIM_OFF);
-        lv_bar_set_value(ui_LaundryRoomHumidityGradient, humidity, LV_ANIM_OFF);
+        temp_label = ui_LaundryRoomTempVal;
+        humidity_label = ui_LaundryRoomHumidityVal;
+        temp_gradient = ui_LaundryRoomTempGradient;
+        humidity_gradient = ui_LaundryRoomHumidityGradient;
+        presence_indicator = ui_LaundryRoomPresenceIndicator;
     } else if (strcmp(room, "Office") == 0) {
-        lv_label_set_text(ui_OfficeTempVal, temp_str);
-        lv_label_set_text(ui_OfficeHumidityVal, humidity_str);
-        lv_bar_set_value(ui_OfficeTempGradient, temp, LV_ANIM_OFF);
-        lv_bar_set_value(ui_OfficeHumidityGradient, humidity, LV_ANIM_OFF);
+        temp_label = ui_OfficeTempVal;
+        humidity_label = ui_OfficeHumidityVal;
+        temp_gradient = ui_OfficeTempGradient;
+        humidity_gradient = ui_OfficeHumidityGradient;
+        presence_indicator = ui_OfficePresenceIndicator;
+    }
+
+    ESP_LOGI(TAG, "Temp: %s", temp_str);
+    ESP_LOGI(TAG, "Hum: %s", humidity_str);
+    ESP_LOGI(TAG, "Occup: %d", occupancy);
+
+    // Update temperature, humidity, and occupancy status
+    lv_label_set_text(temp_label, temp_str);
+    lv_label_set_text(humidity_label, humidity_str);
+    lv_bar_set_value(temp_gradient, temp, LV_ANIM_OFF);
+    lv_bar_set_value(humidity_gradient, humidity, LV_ANIM_OFF);
+
+    if (occupancy) {
+        lv_obj_add_state(presence_indicator, LV_STATE_CHECKED);  // Assume LV_STATE_USER_1 indicates occupancy
+    } else {
+        lv_obj_clear_state(presence_indicator, LV_STATE_CHECKED); // Assume clearing the state indicates no occupancy
     }
 }
 
@@ -102,6 +136,7 @@ void parse_json_data(const char *json_data) {
             if (temp_sensor) {
                 cJSON *temperature = cJSON_GetObjectItem(temp_sensor, "Temperature");
                 cJSON *humidity = cJSON_GetObjectItem(temp_sensor, "Humidity");
+                cJSON *occupancy = cJSON_GetObjectItem(room, "Presence");
 
                 // Convert values to strings
                 char temp_str[16];
@@ -109,12 +144,13 @@ void parse_json_data(const char *json_data) {
                 snprintf(temp_str, sizeof(temp_str), "%d", temperature->valueint);
                 snprintf(humidity_str, sizeof(humidity_str), "%d", humidity->valueint);
 
-                // Update corresponding labels
+                // Update corresponding labels, pass occupancy status
                 update_label(rooms[i],
                              temp_str,
                              temperature->valueint,
                              humidity_str,
-                             humidity->valueint);
+                             humidity->valueint,
+                             !strcmp("true", occupancy->valuestring) ? 1 : 0);  // Default to 0 if occupancy not present
             }
         }
     }
@@ -134,7 +170,7 @@ static void receive_data(const int sock) {
             ESP_LOGW(TAG, "Connection closed");
         } else {
             rx_buffer[len] = 0; // Null-terminate received data
-            ESP_LOGI(TAG, "Received JSON: %s", rx_buffer);
+            ESP_LOGI(TAG, "Received JSON: \e[93m%s\e[0m", rx_buffer);
             parse_json_data(rx_buffer); // Parse JSON data
         }
     } while (len > 0);
