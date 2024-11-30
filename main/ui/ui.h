@@ -200,6 +200,7 @@ extern lv_obj_t * ui_PasswordLabel;
 extern lv_obj_t * ui_PasswordInput;
 extern lv_obj_t * ui_TempUnit;
 extern lv_obj_t * ui_Celsius;
+void ui_event_Switch2(lv_event_t * e);
 extern lv_obj_t * ui_Switch2;
 extern lv_obj_t * ui_Farenheit;
 extern lv_obj_t * ui____initial_actions0;

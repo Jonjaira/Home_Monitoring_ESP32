@@ -55,7 +55,7 @@ void ui_BedroomView_screen_init(void)
     lv_obj_set_x(ui_BedroomTempUnits, -135);
     lv_obj_set_y(ui_BedroomTempUnits, -95);
     lv_obj_set_align(ui_BedroomTempUnits, LV_ALIGN_CENTER);
-    lv_label_set_text(ui_BedroomTempUnits, "C");
+    lv_label_set_text(ui_BedroomTempUnits, "F");
     lv_obj_set_style_text_font(ui_BedroomTempUnits, &ui_font_SmallThin, LV_PART_MAIN | LV_STATE_DEFAULT);
 
     ui_BedroomTempGradient = lv_bar_create(ui_BedroomView);

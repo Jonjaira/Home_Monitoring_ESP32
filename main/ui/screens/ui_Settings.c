@@ -181,7 +181,7 @@ void ui_Settings_screen_init(void)
     lv_obj_set_x(ui_Celsius, 40);
     lv_obj_set_y(ui_Celsius, -1);
     lv_obj_set_align(ui_Celsius, LV_ALIGN_CENTER);
-    lv_label_set_text(ui_Celsius, "C");
+    lv_label_set_text(ui_Celsius, "F");
     lv_obj_add_flag(ui_Celsius, LV_OBJ_FLAG_FLEX_IN_NEW_TRACK);     /// Flags
     lv_obj_set_style_text_color(ui_Celsius, lv_color_hex(0x000000), LV_PART_MAIN | LV_STATE_DEFAULT);
     lv_obj_set_style_text_opa(ui_Celsius, 255, LV_PART_MAIN | LV_STATE_DEFAULT);
@@ -199,13 +199,14 @@ void ui_Settings_screen_init(void)
     lv_obj_set_x(ui_Farenheit, 40);
     lv_obj_set_y(ui_Farenheit, -1);
     lv_obj_set_align(ui_Farenheit, LV_ALIGN_CENTER);
-    lv_label_set_text(ui_Farenheit, "F");
+    lv_label_set_text(ui_Farenheit, "C");
     lv_obj_set_style_text_color(ui_Farenheit, lv_color_hex(0x000000), LV_PART_MAIN | LV_STATE_DEFAULT);
     lv_obj_set_style_text_opa(ui_Farenheit, 255, LV_PART_MAIN | LV_STATE_DEFAULT);
     lv_obj_set_style_text_font(ui_Farenheit, &ui_font_Regular, LV_PART_MAIN | LV_STATE_DEFAULT);
 
     lv_obj_add_event_cb(ui_CancelButton, ui_event_CancelButton, LV_EVENT_ALL, NULL);
     lv_obj_add_event_cb(ui_SaveButton, ui_event_SaveButton, LV_EVENT_ALL, NULL);
+    lv_obj_add_event_cb(ui_Switch2, ui_event_Switch2, LV_EVENT_ALL, NULL);
     lv_obj_add_event_cb(ui_Settings, ui_event_Settings, LV_EVENT_ALL, NULL);
 
 }

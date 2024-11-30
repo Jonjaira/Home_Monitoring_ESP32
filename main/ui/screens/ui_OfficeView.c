@@ -55,7 +55,7 @@ void ui_OfficeView_screen_init(void)
     lv_obj_set_x(ui_OfficeTempUnits, -135);
     lv_obj_set_y(ui_OfficeTempUnits, -95);
     lv_obj_set_align(ui_OfficeTempUnits, LV_ALIGN_CENTER);
-    lv_label_set_text(ui_OfficeTempUnits, "C");
+    lv_label_set_text(ui_OfficeTempUnits, "F");
     lv_obj_set_style_text_font(ui_OfficeTempUnits, &ui_font_SmallThin, LV_PART_MAIN | LV_STATE_DEFAULT);
 
     ui_OfficeTempGradient = lv_bar_create(ui_OfficeView);

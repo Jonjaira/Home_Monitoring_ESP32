@@ -12,6 +12,7 @@ extern "C" {
 
 void cancel_settings_change(lv_event_t * e);
 void save_settings(lv_event_t * e);
+void temp_unit_change(lv_event_t * e);
 
 #ifdef __cplusplus
 } /*extern "C"*/

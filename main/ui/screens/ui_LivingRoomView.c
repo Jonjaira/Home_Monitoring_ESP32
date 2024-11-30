@@ -55,7 +55,7 @@ void ui_LivingRoomView_screen_init(void)
     lv_obj_set_x(ui_LivingroomTempUnits, -135);
     lv_obj_set_y(ui_LivingroomTempUnits, -95);
     lv_obj_set_align(ui_LivingroomTempUnits, LV_ALIGN_CENTER);
-    lv_label_set_text(ui_LivingroomTempUnits, "C");
+    lv_label_set_text(ui_LivingroomTempUnits, "F");
     lv_obj_set_style_text_font(ui_LivingroomTempUnits, &ui_font_SmallThin, LV_PART_MAIN | LV_STATE_DEFAULT);
 
     ui_LivingroomTempGradient = lv_bar_create(ui_LivingRoomView);

@@ -210,6 +210,7 @@ lv_obj_t * ui_PasswordLabel;
 lv_obj_t * ui_PasswordInput;
 lv_obj_t * ui_TempUnit;
 lv_obj_t * ui_Celsius;
+void ui_event_Switch2(lv_event_t * e);
 lv_obj_t * ui_Switch2;
 lv_obj_t * ui_Farenheit;
 lv_obj_t * ui____initial_actions0;
@@ -1958,6 +1959,20 @@ void ui_event_SaveButton(lv_event_t * e)
         _ui_screen_change(&ui_Home, LV_SCR_LOAD_ANIM_MOVE_TOP, 600, 1200, &ui_Home_screen_init);
         save_settings(e);
         SettingsSaved_Animation(ui_SettingsSavedLabel, 0);
+    }
+}
+void ui_event_Switch2(lv_event_t * e)
+{
+    lv_event_code_t event_code = lv_event_get_code(e);
+    lv_obj_t * target = lv_event_get_target(e);
+    if(event_code == LV_EVENT_VALUE_CHANGED) {
+        temp_unit_change(e);
+        _ui_checked_set_text_value(ui_KitchenTempUnits, target, "C", "F");
+        _ui_checked_set_text_value(ui_LivingroomTempUnits, target, "C", "F");
+        _ui_checked_set_text_value(ui_MasterBedroomTempUnits, target, "C", "F");
+        _ui_checked_set_text_value(ui_BedroomTempUnits, target, "C", "F");
+        _ui_checked_set_text_value(ui_LaundryRoomTempUnits, target, "C", "F");
+        _ui_checked_set_text_value(ui_OfficeTempUnits, target, "C", "F");
     }
 }
 

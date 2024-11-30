@@ -4,6 +4,7 @@
 // Project name: home_monitoring
 
 #include "ui.h"
+extern void set_is_celsius(lv_event_t * e);
 
 void cancel_settings_change(lv_event_t * e)
 {
@@ -13,4 +14,14 @@ void cancel_settings_change(lv_event_t * e)
 void save_settings(lv_event_t * e)
 {
 	// Your code here
+}
+
+void kitchen_temp_unit_change(lv_event_t * e)
+{
+	// Your code here
+}
+
+void temp_unit_change(lv_event_t * e)
+{
+set_is_celsius(e);
 }

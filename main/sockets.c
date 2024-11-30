@@ -55,8 +55,101 @@ extern lv_obj_t * ui_OfficePresenceIndicator;
 #define PORT                        3333
 #define MAX_CLIENTS                 5
 
+//Static Variables
+static bool isCelsius = 0;
 static const char *TAG = "example";
 const char *rooms[] = {"Kitchen", "LivingRoom", "MainBedroom", "BedRoom", "Laundry", "Office"};
+
+static int32_t fahrenheit_to_celsius(int32_t temp_f) {
+    return (temp_f - 32) * 5 / 9;
+}
+
+void set_is_celsius(lv_event_t * e) {
+    lv_obj_t * obj = lv_event_get_target(e);
+    lv_event_code_t code = lv_event_get_code(e);
+    static int32_t kitchenTempF = 0;
+    static int32_t LivingroomTempF = 0;
+    static int32_t MasterBedroomTempF = 0;
+    static int32_t BedroomTempF = 0;
+    static int32_t LaundryRoomTempF = 0;
+    static int32_t OfficeTempF = 0;
+    
+    if (code == LV_EVENT_VALUE_CHANGED) {
+        ESP_LOGI(TAG, "%s", __func__);
+        bool state = lv_obj_has_state(obj, LV_STATE_CHECKED); // Check if the switch is on or off
+        isCelsius = state;
+   
+        if (isCelsius) {
+            char* kitchenTempLabel = lv_label_get_text(ui_KitchenTempVal);
+            kitchenTempF = atoi(kitchenTempLabel);
+            int32_t kitchenTempC = fahrenheit_to_celsius(kitchenTempF);
+            char kitchenTempCStr[16];
+            snprintf(kitchenTempCStr, sizeof(kitchenTempCStr), "%d", kitchenTempC);
+            lv_label_set_text(ui_KitchenTempVal, kitchenTempCStr);
+
+            char* LivingroomTempLabel = lv_label_get_text(ui_LivingroomTempVal);
+            LivingroomTempF = atoi(LivingroomTempLabel);
+            int32_t LivingroomTempC = fahrenheit_to_celsius(LivingroomTempF);
+            char LivingroomTempCStr[16];
+            snprintf(LivingroomTempCStr, sizeof(LivingroomTempCStr), "%d", LivingroomTempC);
+            lv_label_set_text(ui_LivingroomTempVal, LivingroomTempCStr);
+
+            char* MasterBedroomLabel = lv_label_get_text(ui_MasterBedroomTempVal);
+            MasterBedroomTempF = atoi(MasterBedroomLabel);
+            int32_t MasterBedroomTempC = fahrenheit_to_celsius(MasterBedroomTempF);
+            char MasterBedroomTempCStr[16];
+            snprintf(MasterBedroomTempCStr, sizeof(MasterBedroomTempCStr), "%d", MasterBedroomTempC);
+            lv_label_set_text(ui_MasterBedroomTempVal, MasterBedroomTempCStr);
+
+            char* BedroomTempLabel = lv_label_get_text(ui_BedroomTempVal);
+            BedroomTempF = atoi(BedroomTempLabel);
+            int32_t BedroomTempC = fahrenheit_to_celsius(BedroomTempF);
+            char BedroomTempCStr[16];
+            snprintf(BedroomTempCStr, sizeof(BedroomTempCStr), "%d", BedroomTempC);
+            lv_label_set_text(ui_BedroomTempVal, BedroomTempCStr);
+
+            char* LaundryRoomTempLabel = lv_label_get_text(ui_LaundryRoomTempVal);
+            LaundryRoomTempF = atoi(LaundryRoomTempLabel);
+            int32_t LaundryRoomTempC = fahrenheit_to_celsius(LaundryRoomTempF);
+            char LaundryRoomTempCStr[16];
+            snprintf(LaundryRoomTempCStr, sizeof(LaundryRoomTempCStr), "%d", LaundryRoomTempC);
+            lv_label_set_text(ui_LaundryRoomTempVal, LaundryRoomTempCStr);
+
+            char* OfficeTempLabel = lv_label_get_text(ui_OfficeTempVal);
+            OfficeTempF = atoi(OfficeTempLabel);
+            int32_t OfficeTempC = fahrenheit_to_celsius(OfficeTempF);
+            char OfficeTempCStr[16];
+            snprintf(OfficeTempCStr, sizeof(OfficeTempCStr), "%d", OfficeTempC);
+            lv_label_set_text(ui_OfficeTempVal, OfficeTempCStr);
+        }
+        else {
+            char kitchenTempFStr[16];
+            snprintf(kitchenTempFStr, sizeof(kitchenTempFStr), "%d", kitchenTempF);
+            lv_label_set_text(ui_KitchenTempVal, kitchenTempFStr);
+
+            char LivingroomTempFStr[16];
+            snprintf(LivingroomTempFStr, sizeof(LivingroomTempFStr), "%d", LivingroomTempF);
+            lv_label_set_text(ui_LivingroomTempVal, LivingroomTempFStr);
+
+            char MasterBedroomTempFStr[16];
+            snprintf(MasterBedroomTempFStr, sizeof(MasterBedroomTempFStr), "%d", MasterBedroomTempF);
+            lv_label_set_text(ui_MasterBedroomTempVal, MasterBedroomTempFStr);
+
+            char BedroomTempFStr[16];
+            snprintf(BedroomTempFStr, sizeof(BedroomTempFStr), "%d", BedroomTempF);
+            lv_label_set_text(ui_BedroomTempVal, BedroomTempFStr);
+
+            char LaundryRoomTempFStr[16];
+            snprintf(LaundryRoomTempFStr, sizeof(LaundryRoomTempFStr), "%d", LaundryRoomTempF);
+            lv_label_set_text(ui_LaundryRoomTempVal, LaundryRoomTempFStr);
+
+            char OfficeTempFStr[16];
+            snprintf(OfficeTempFStr, sizeof(OfficeTempFStr), "%d", OfficeTempF);
+            lv_label_set_text(ui_OfficeTempVal, OfficeTempFStr);
+        }
+
+    }
+}
 
 // Function to update labels based on room data
 void update_label(const char *room, char *temp_str, int32_t temp, char *humidity_str, int32_t humidity, int occupancy) {
@@ -65,6 +158,13 @@ void update_label(const char *room, char *temp_str, int32_t temp, char *humidity
     lv_obj_t *temp_gradient = NULL;
     lv_obj_t *humidity_gradient = NULL;
     lv_obj_t *presence_indicator = NULL;
+    
+    ESP_LOGI(TAG, "%s", __func__);
+
+    if (isCelsius) {
+        temp = (temp - 32) * 5 / 9;
+        sprintf(temp_str, "%d", temp);
+    }
 
     if (strcmp(room, "Kitchen") == 0) {
         temp_label = ui_KitchenTempVal;

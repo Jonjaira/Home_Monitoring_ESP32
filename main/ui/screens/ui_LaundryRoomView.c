@@ -55,7 +55,7 @@ void ui_LaundryRoomView_screen_init(void)
     lv_obj_set_x(ui_LaundryRoomTempUnits, -135);
     lv_obj_set_y(ui_LaundryRoomTempUnits, -95);
     lv_obj_set_align(ui_LaundryRoomTempUnits, LV_ALIGN_CENTER);
-    lv_label_set_text(ui_LaundryRoomTempUnits, "C");
+    lv_label_set_text(ui_LaundryRoomTempUnits, "F");
     lv_obj_set_style_text_font(ui_LaundryRoomTempUnits, &ui_font_SmallThin, LV_PART_MAIN | LV_STATE_DEFAULT);
 
     ui_LaundryRoomTempGradient = lv_bar_create(ui_LaundryRoomView);
